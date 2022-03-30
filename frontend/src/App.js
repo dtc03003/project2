@@ -8,6 +8,7 @@ import Error from "./components/views/Error/Error";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import SignupPage from "./components/views/SignupPage/SignupPage";
 import TransferPage from "./components/views/TransferPage/TransferPage";
+import DepositPage from "./components/views/DepositPage/DepositPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />
           <Route exact path="/transfer" element={<TransferPage />} />
+          <Route exact path="/deposit" element={<DepositPage />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
