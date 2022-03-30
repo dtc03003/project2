@@ -32,7 +32,7 @@ public class AccountDto {
                     .memberNo(memberNo)
                     .bankName("SBank")
                     .accountNumber(accountNumber)
-                    .balance(0)
+                    .balance(50000)
                     .creationDate(LocalDate.now().toString())
                     .build();
     }
