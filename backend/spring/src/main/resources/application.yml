@@ -1,0 +1,62 @@
+server:
+    port: 9000
+
+#Swagger Settings
+# http://서버주소/swagger-ui.html
+springdoc:
+    api-docs:
+        path: /api-docs
+    swagger-ui:
+        path: /swagger-ui.html
+
+spring:
+    #DataBase Settings
+    dataSource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://j6d201.p.ssafy.io:3306/sbank?useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: sbankd201**
+    
+    sql:
+        init:
+            mode: always
+
+    #JPA Settings
+    jpa:
+        open-in-view: false
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate:
+            ddl-auto: update
+        generate-ddl: false
+        show-sql: true
+        database: mysql
+        properties:
+            hibernate:
+                format_sql: true
+        defer-datasource-initialization: true #ddl-auto 실행(스키마 생성) 후 sql 스크립트 작동
+
+    # Oath2 Settings
+    # security:
+    #     oauth2:
+    #         client:
+    #             registration:
+    #                 kakao:
+    #                     client-id: #cliendId key
+    #                     client-secret: #clientSecret key
+    #                     redirect-uri:  https://dapi.kakao.com/v2/vision/face/detect #얼굴인식
+
+#JWT Settings
+jwt:
+    header: Authorization
+    secret: c3NhZnktZ3VtaS10d28tYmFuLWQyMDEtYmFja2VuZC1qd3Qtc2VjcmV0LXNzYWZ5LWd1bWktdHdvLWJhbi1kMjAxLWJhY2tlbmQtand0LXNlY3JldAo= #jwt secret key
+    #echo 'ssafy-gumi-two-ban-d201-backend-jwt-secret-ssafy-gumi-two-ban-d201-backend-jwt-secret'|base64
+
+# Hibernate logging
+logging:
+    level:
+        org:
+            hibernate:
+                sql: Debug
+                type:
+                    descriptor:
+                        sql: trace

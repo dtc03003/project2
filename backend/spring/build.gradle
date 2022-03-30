@@ -1,0 +1,67 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.10'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.sbank'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories { //라이브러리가 저장된 위치 등 설정
+	mavenCentral() //기본 Maven Repository
+}
+
+ext {
+	set('snippetsDir', file("build/generated-snippets"))
+}
+
+dependencies { //라이브러리 사용을 위한 의존성 설정
+	//Spring MVC를 사용한 REST 서비스 개발
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//jpa
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.10'
+	implementation 'org.hibernate:hibernate-core:5.4.10.Final'
+
+	//auth2
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	implementation 'com.google.code.gson:gson:2.8.5'
+
+	//security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	//jwt
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+	//webSocket
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+	//db
+	runtimeOnly 'mysql:mysql-connector-java'
+
+	//lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	//test(스프링 어플리케이션의 테스트 기능 제공)
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	//swagger
+	implementation 'org.springdoc:springdoc-openapi-ui:1.5.6'
+	implementation 'org.springdoc:springdoc-openapi-data-rest:1.5.6'
+}
+
+test {
+	useJUnitPlatform()
+}
