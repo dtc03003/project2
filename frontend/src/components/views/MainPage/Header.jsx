@@ -1,16 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './MainPage.css'
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { Button } from 'bootstrap';
+import axios from 'axios';
 
 export default function Header() {
-
-  const navigate = useNavigate();
-
-  const isLogout = () => {
-    localStorage.clear();
-    navigate('/');
-  };
   
   return (
     <div className="header">
@@ -23,11 +17,8 @@ export default function Header() {
         </h1>
 
         <div id="utill">
-          <span className='login'>
-            <Link to="/login">로그인</Link>
-            <Link to="/signup">회원가입</Link>
-            <button type='button' onClick={isLogout}>로그아웃</button>
-          </span>
+          <LoginText />
+          
         </div>
       </div>
 
@@ -42,4 +33,56 @@ export default function Header() {
       </div>
     </div>
   )
+}
+
+function LoginState() {
+  const [userName, setUserName] = useState('');
+  const token = localStorage.getItem("accessToken")
+
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    axios.post('/api/user/info')
+      .then((Response) => {
+        setUserName(JSON.stringify(Response.data.name));
+      })
+    .catch((Error) => { console.log(Error) }) 
+  
+  
+  const navigate = useNavigate();
+
+  const isLogout = () => {
+    console.log("버튼 클릭됨")
+    localStorage.clear();
+    navigate('/');
+  };
+  
+  return (
+    <div>
+      <span className='login'>
+        <button onClick={isLogout}>로그아웃</button>
+        <p> {userName} 님 환영합니다.</p>
+      </span>
+      <span>
+      </span>
+    </div>
+  )
+}
+
+function UnLoginState() {
+  return (
+    <div>
+      <span className='login'>
+        <Link to="/login">로그인</Link>
+      </span>
+      <span>
+        <Link to="/signup">회원가입</Link>
+      </span>
+    </div>
+  );
+}
+
+function LoginText() {
+  if (localStorage.getItem("accessToken") === null) {
+    return <UnLoginState/>
+  }
+  return <LoginState/>
 }

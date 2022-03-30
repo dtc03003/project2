@@ -1,22 +1,52 @@
-import React, { Component } from "react";
-import ApexCharts from 'react-apexcharts'
+import React, { Component, useState, useEffect } from "react";
+import ApexCharts from 'react-apexcharts';
+import axios from 'axios';
 
 export default function T_Body() {
+
     return (
         <div>
             <div className='Check_Balance'>
                 <h1>잔액 조회</h1>
                 <div>
                     <span>계좌 번호 </span>
-                    <span>1234-5678-90</span>
-                    <button>조회하기</button>
-                </div>
-                <div>
-                    <span>24,500</span>
-                    <span>원</span>
+                    <GetAccount />
+                    <button onClick={clicked}>조회하기</button>
                 </div>
             </div>
             <M_Chart></M_Chart>
+        </div>
+    )
+}
+
+function clicked() {
+    console.log("클릭됨");
+    const token = localStorage.getItem("accessToken")
+
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    axios.post('/api/user/info')
+        .then((Response) => {
+            console.log(JSON.stringify(Response.data.name))
+        })
+    .catch((Error)=>{console.log(Error)}) 
+}
+
+function GetAccount() {
+    const [userAccount, setAccount] = useState('');
+    const [userBalance, setBalance] = useState('');
+    const token = localStorage.getItem("accessToken")
+
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    axios.get('/api/account/lookup')
+        .then((Response) => {
+                setAccount(JSON.stringify(Response.data.accountNumber))
+                setBalance(JSON.stringify(Response.data.balance))
+            })
+        .catch((Error) => { console.log(Error) }) 
+    return (
+        <div>
+            <span>{ userAccount }</span>
+            <span>{ userBalance } 원</span>
         </div>
     )
 }
@@ -72,3 +102,4 @@ class M_Chart extends Component {
         );
     }
 }
+
