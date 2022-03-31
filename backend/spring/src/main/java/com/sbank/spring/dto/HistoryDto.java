@@ -61,7 +61,7 @@ public class HistoryDto {
                     .senderAccount(account.getAccountNumber())
                     .receiver(name)
                     .receiverAccount(account.getAccountNumber())
-                    .statement(0)
+                    .statement(1)
                     .money(depositDto.getMoney())
                     .transactionDate(depositDto.getTransactionDate())
                     .build();
