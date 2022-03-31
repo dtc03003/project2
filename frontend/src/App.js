@@ -8,6 +8,7 @@ import Error from "./components/views/Error/Error";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import SignupPage from "./components/views/SignupPage/SignupPage";
 import TransferPage from "./components/views/TransferPage/TransferPage";
+import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
 
 function App() {
   return (
@@ -19,11 +20,12 @@ function App() {
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />
           <Route exact path="/transfer" element={<TransferPage />} />
+          <Route exact path="/faceai" element={<FaceAIPage />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
   );
 }
- 
+
 export default App;
