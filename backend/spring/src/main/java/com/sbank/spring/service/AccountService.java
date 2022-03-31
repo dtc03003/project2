@@ -78,7 +78,6 @@ public class AccountService {
     public HistoryDto transferMoney(TransferDto transferDto) {
         Member member = memberRepository.findById(SecurityUtil.getCurrentMemberId());
         boolean check = passwordEncoder.matches(transferDto.getPassword(), member.getPassword());
-        System.out.println(check);
         if(check) { //비밀번호 불일치 시 이체 불가
             Account senderAccount = accountRepository.findByAccountNumber(transferDto.getSenderAccount());
             Account receiverAccount = accountRepository.findByAccountNumber(transferDto.getReceiverAccount());
