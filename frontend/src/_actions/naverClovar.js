@@ -12,7 +12,6 @@ export function faceAI(image) {
         image : image
     }
 
-    console.log(image);
     const request = axios.post(`${BASE_URL}/recognize/face`, img, {headers: headers}).then(
         (res) => {
             console.log(res);
