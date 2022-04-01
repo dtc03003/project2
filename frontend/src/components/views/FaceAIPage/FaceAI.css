@@ -12,9 +12,9 @@
     font-style: normal;
 }
 
-* {
+/* * {
     background-color: #F0FFFF;
-}
+} */
 
 #faceAIPage, #faceLoadingPage {
     vertical-align: middle;
@@ -22,21 +22,25 @@
 }
 
 #title {
-    margin-top: 1vw;
+    margin-top: 1%;
 }
 
-#title p#titleName {
+#title h1#titleName {
     font-family: 'SDSamliphopangche_Outline', serif;
     color:darkblue;
 }
 
-#title p#faceAIInfo, .loading p {
+#title h3#faceAIInfo, .loading p {
     font-family: 'yg-jalnan', serif;
 }
 
-p#titleName, p#faceAIInfo{
+/* p#titleName{
     font-size: 2.2vw;
 }
+
+p#faceAIInfo{
+    font-size: 1.7vw;
+} */
 
 #title, #webcam, #webcamBtn, #faceLoadingPage {
     text-align : center;
@@ -52,4 +56,15 @@ p#titleName, p#faceAIInfo{
 
 .loading p {
     font-size: 2vw;
+}
+
+.cameraImg {
+    width: 8vw;
+    height: 13vh;
+    cursor: pointer;
+}
+
+.cameraImg:hover {
+    width: 9vw;
+    height: 15vh;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Webcam from "react-webcam";
 import { faceAI } from '../../../_actions/naverClovar';
-// import {CameraTwoTone} from '@ant-design/icons';
+import Camera from "../../../assets/camera.png"
 import "./FaceAI.css";
 
 export default function FaceAI() {
@@ -17,8 +17,8 @@ export default function FaceAI() {
     return (
         <div id="faceAIPage">
             <div id="title">
-                <p id="titleName">예적금 추천 서비스</p>
-                <p id="faceAIInfo">카메라를 보고 사진기를 눌러주세요!</p>
+                <h1 id="titleName">예적금 추천 서비스</h1>
+                <h3 id="faceAIInfo">카메라를 보고 사진기를 눌러주세요!</h3>
             </div>
 
             <div id="webcam">
@@ -30,9 +30,7 @@ export default function FaceAI() {
             </div>
             
             <div id="webcamBtn">
-                {/* twoToneColor="" <- 색 지정 */}
-                <button onClick={capture}>임시버튼</button>
-                {/* <CameraTwoTone onClick={capture} style={{ fontSize: '5em'}}/> */}
+                <img src={Camera} onClick={capture} alt="Camera" className="cameraImg"/>
             </div>
         </div>
         );
