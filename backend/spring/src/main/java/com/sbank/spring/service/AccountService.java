@@ -102,7 +102,7 @@ public class AccountService {
     @Transactional //내역 조회
     public List<History> recordHistory(String accountNumber) {
         Account account = accountRepository.findByAccountNumber(accountNumber);
-        return historyRepository.findByAccountId(account.getAccountId());
+        return historyRepository.findByAccountIdOrderByTransactionDateDesc(account.getAccountId());
     }
 
     @Transactional //이름으로 계좌번호 조회
