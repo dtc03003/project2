@@ -8,6 +8,6 @@ import com.sbank.spring.mapping.ConsumptionMapping;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HistoryRepository extends JpaRepository<History, Long>{
-    List<History> findByAccountId(Long accountId);
+    List<History> findByAccountIdOrderByTransactionDateDesc(Long accountId);
     List<ConsumptionMapping> findByTransactionDateLikeAndAccountIdAndStatement(String year, Long accountId, int statement);
 }
