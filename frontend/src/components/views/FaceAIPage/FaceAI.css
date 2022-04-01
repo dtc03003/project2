@@ -1,0 +1,55 @@
+/*CSS Font*/
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    background-color: #F0FFFF;
+}
+
+#faceAIPage, #faceLoadingPage {
+    vertical-align: middle;
+    font-size: 10px;
+}
+
+#title {
+    margin-top: 1vw;
+}
+
+#title p#titleName {
+    font-family: 'SDSamliphopangche_Outline', serif;
+    color:darkblue;
+}
+
+#title p#faceAIInfo, .loading p {
+    font-family: 'yg-jalnan', serif;
+}
+
+p#titleName, p#faceAIInfo{
+    font-size: 2.2vw;
+}
+
+#title, #webcam, #webcamBtn, #faceLoadingPage {
+    text-align : center;
+}
+
+#faceLoadingPage .loading {
+    margin-top: 5%;
+}
+
+.loading .loadingImg {
+    width: 40vw;
+}
+
+.loading p {
+    font-size: 2vw;
+}

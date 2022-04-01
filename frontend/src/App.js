@@ -9,6 +9,7 @@ import LoginPage from "./components/views/LoginPage/LoginPage";
 import SignupPage from "./components/views/SignupPage/SignupPage";
 import TransferPage from "./components/views/TransferPage/TransferPage";
 import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
+import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/signup" element={<SignupPage />} />
           <Route exact path="/transfer" element={<TransferPage />} />
           <Route exact path="/faceai" element={<FaceAIPage />} />
+          <Route exact path="/faceloading" element={<FaceLoadingPage />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
