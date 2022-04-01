@@ -51,6 +51,12 @@ jwt:
     secret: c3NhZnktZ3VtaS10d28tYmFuLWQyMDEtYmFja2VuZC1qd3Qtc2VjcmV0LXNzYWZ5LWd1bWktdHdvLWJhbi1kMjAxLWJhY2tlbmQtand0LXNlY3JldAo= #jwt secret key
     #echo 'ssafy-gumi-two-ban-d201-backend-jwt-secret-ssafy-gumi-two-ban-d201-backend-jwt-secret'|base64
 
+social:
+    naver:
+        client-id: AoRx4gYXgVnKwhqd8C9C #cliendId key
+        client-secret: gRkgJZ58po #clientSecret key
+        url:
+            face: https://openapi.naver.com/v1/vision/face
 # Hibernate logging
 logging:
     level:

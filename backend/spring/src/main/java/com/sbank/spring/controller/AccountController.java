@@ -53,7 +53,7 @@ public class AccountController {
         return ResponseEntity.ok(accountService.findBalanceByAccountNumber(account));
     }
     
-    @Operation(summary = "계좌 이체", description="0: 입금,송금, 1: 받은 내역")
+    @Operation(summary = "계좌 이체", description="0: 출금, 1: 입금")
     @PostMapping(value="/transfer")
     public ResponseEntity<HistoryDto> transferMoney(@RequestBody TransferDto transferDto) {
         HistoryDto historyDto = accountService.transferMoney(transferDto);

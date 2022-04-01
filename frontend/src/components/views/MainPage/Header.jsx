@@ -42,13 +42,11 @@ function LoginState() {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
     axios.post('/api/user/info')
       .then((Response) => {
-        setUserName(JSON.stringify(Response.data.name));
+        setUserName(JSON.stringify(Response.data.name).slice(1, -1));
       })
     .catch((Error) => { console.log(Error) }) 
   
-  
   const navigate = useNavigate();
-
   const isLogout = () => {
     console.log("버튼 클릭됨")
     localStorage.clear();
