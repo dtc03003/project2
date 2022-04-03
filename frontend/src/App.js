@@ -7,8 +7,9 @@ import NotFound from "./components/views/NotFound/NotFound";
 import Error from "./components/views/Error/Error";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import SignupPage from "./components/views/SignupPage/SignupPage";
-import TransferPage from "./components/views/TransferPage/TransferPage";
+import CheckBalancePage from "./components/views/CheckBalancePage/CheckBalance";
 import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
+import Transferpage from './components/views/TransferPage/TransferPage';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
           <Route exact path="/main" element={<MainPage />} />
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />
-          <Route exact path="/transfer" element={<TransferPage />} />
+          <Route exact path="/checkbalance" element={<CheckBalancePage />} />
           <Route exact path="/faceai" element={<FaceAIPage />} />
+          <Route exact path="/transfer" element={<Transferpage />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
