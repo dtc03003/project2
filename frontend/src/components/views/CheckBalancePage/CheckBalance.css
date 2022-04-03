@@ -1,0 +1,9 @@
+.t_body {position:relative; width:940px; margin:0 auto;}
+.t_body .Check_Balance {border: 1px solid; margin: 0 -5px; display: block;}
+.t_body .Check_Balance div:first-child {float:left; position:relative; padding: 0 5px;}
+.t_body .Check_Balance .accountArea {height: 317px; width: 50%; text-align: center;}
+.t_body .Check_Balance .accountArea .inner {position: absolute; top:50%; left:50%; margin-top: -70px; margin-left: -70px;}
+
+
+.t_body .outer {margin-bottom: 80px; text-align: center;}
+.t_body .outer .inner { display: inline-block; }

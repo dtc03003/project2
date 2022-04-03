@@ -78,7 +78,6 @@ public class AccountService {
     public HistoryDto transferMoney(TransferDto transferDto) {
         Member member = memberRepository.findById(SecurityUtil.getCurrentMemberId());
         boolean check = passwordEncoder.matches(transferDto.getPassword(), member.getPassword());
-        System.out.println(check);
         if(check) { //비밀번호 불일치 시 이체 불가
             Account senderAccount = accountRepository.findByAccountNumber(transferDto.getSenderAccount());
             Account receiverAccount = accountRepository.findByAccountNumber(transferDto.getReceiverAccount());
@@ -103,7 +102,7 @@ public class AccountService {
     @Transactional //내역 조회
     public List<History> recordHistory(String accountNumber) {
         Account account = accountRepository.findByAccountNumber(accountNumber);
-        return historyRepository.findByAccountId(account.getAccountId());
+        return historyRepository.findByAccountIdOrderByTransactionDateDesc(account.getAccountId());
     }
 
     @Transactional //이름으로 계좌번호 조회

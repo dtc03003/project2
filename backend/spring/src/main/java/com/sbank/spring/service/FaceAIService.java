@@ -104,7 +104,6 @@ public class FaceAIService {
             second = Integer.parseInt(data[1]);
             
             System.out.println(response.toString()); //반환된 데이터 확인
-            System.out.println(first + " " + second);
 
         } catch (Exception e) {
             System.out.println(e);

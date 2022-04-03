@@ -25,8 +25,8 @@ export default function Header() {
       <div className='gnb'>
         <ul className='topGnb'>
           {/* 추후 링크 추가 */}
-          <li> <Link to="/transfer">조회</Link></li>
-          <li><a href=''>이체</a></li>
+          <li><Link to="/checkbalance">조회</Link></li>
+          <li><Link to="/transfer">이체</Link></li>
           <li><a href=''>대출</a></li>
           <li><a href=''>뱅킹관리</a></li>
         </ul>
@@ -55,12 +55,8 @@ function LoginState() {
   
   return (
     <div>
-      <span className='login'>
         <button onClick={isLogout}>로그아웃</button>
-        <p> {userName} 님 환영합니다.</p>
-      </span>
-      <span>
-      </span>
+        <p>{userName} 님 환영합니다.</p>
     </div>
   )
 }

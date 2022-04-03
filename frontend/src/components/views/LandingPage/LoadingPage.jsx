@@ -1,19 +1,21 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import "./Landing.css";
-import Sori_Normal from "./Sori_Normal"
+import { Link } from "react-router-dom";
+import Loading from "../../../assets/Loading.gif"
 
-const Landingpage = () => {
+const LoadingPage = () => {
+  setTimeout(() => {
+    moveInfo();
+  }, 3000)
   return (
     <div className='LandingFull'>
-      <div className="header" >
+      <div className="header">
         <div className='top'>
           <h1 className="logo">
             <Link to="/main">
               {/* 로고 변경예정 */}
               <img src="https://www.kbanknow.com/resource/img/reform/layout/logo_kbank.png"></img>
             </Link>
-            
           </h1>
 
           <div id="utill">
@@ -25,9 +27,17 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
-      <Sori_Normal />
+      <div className="loading">
+        <img src={Loading} alt="Loading"/>
+        <h1>분석중입니다! 잠시만 기다려주세요...</h1>
+      </div>  
     </div>
   )
 }
+function moveInfo () {
+  return (
+    window.location.href='/result'
+  )
+}
 
-export default Landingpage
+export default LoadingPage

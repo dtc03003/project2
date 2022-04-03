@@ -7,17 +7,14 @@ export function faceAI(image) {
     const headers = {
         "Access-Control-Allow-Origin" : "*"
     }
-
     const img = {
         image : image
     }
-
     const request = axios.post(`${BASE_URL}/recognize/face`, img, {headers: headers}).then(
         (res) => {
-            console.log(res);
-            console.log(res.data);
+            sessionStorage.setItem("faceAge", res.data);
+            window.location.href ='/faceloading';
         }
     )
-
     return request;
 }
