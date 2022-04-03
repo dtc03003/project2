@@ -19,16 +19,22 @@
     "holderjs": "^2.9.9",
     "http-proxy-middleware": "^2.0.4",
     "jquery": "^3.6.0",
+    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-apexcharts": "^1.4.0",
     "react-bootstrap": "^2.2.1",
     "react-dom": "^17.0.2",
     "react-error-boundary": "^3.1.4",
     "react-hot-toast": "^2.2.0",
+    "react-multi-carousel": "^2.8.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+<<<<<<< HEAD
     "recordrtc": "^5.6.2",
+=======
+    "react-webcam": "^7.0.0",
+>>>>>>> f92e331715cf6f5505e4c077ed529725e0d42338
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.4.1",
     "three": "^0.139.1",
@@ -57,6 +63,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://j6d201.p.ssafy.io:9000"
+  }
 }

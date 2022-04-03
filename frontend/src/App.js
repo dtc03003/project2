@@ -11,6 +11,13 @@ import TransferPage from "./components/views/TransferPage/TransferPage";
 import LoadingPage from "./components/views/LandingPage/LoadingPage";
 import ResultPage from "./components/views/LandingPage/ResultPage"
 
+import DepositPage from "./components/views/DepositPage/DepositPage";
+import DepositCarousel from "./components/views/DepositPage/DepositCarousel";
+
+import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
+import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
+
+
 function App() {
   return (
     <ErrorBoundary FallbackComponent={<Error />}>
@@ -23,11 +30,18 @@ function App() {
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />
           <Route exact path="/transfer" element={<TransferPage />} />
+
+          <Route exact path="/deposit" element={<DepositPage />} />
+          <Route exact path="/depositcarousel" element={<DepositCarousel />} />
+          
+
+          <Route exact path="/faceai" element={<FaceAIPage />} />
+          <Route exact path="/faceloading" element={<FaceLoadingPage />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
   );
 }
- 
+
 export default App;

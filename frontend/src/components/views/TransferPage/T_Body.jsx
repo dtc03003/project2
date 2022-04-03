@@ -1,55 +1,58 @@
 import React, { Component, useState, useEffect } from "react";
 import ApexCharts from 'react-apexcharts';
 import axios from 'axios';
+import Board from './Board';
+import styles from './TransferPage.css'
 
 export default function T_Body() {
-
-    return (
-        <div>
-            <div className='Check_Balance'>
-                <h1>잔액 조회</h1>
-                <div>
-                    <span>계좌 번호 </span>
-                    <GetAccount />
-                    <button onClick={clicked}>조회하기</button>
-                </div>
-            </div>
-            <M_Chart></M_Chart>
-        </div>
-    )
-}
-
-function clicked() {
-    console.log("클릭됨");
-    const token = localStorage.getItem("accessToken")
-
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-    axios.post('/api/user/info')
-        .then((Response) => {
-            console.log(JSON.stringify(Response.data.name))
-        })
-    .catch((Error)=>{console.log(Error)}) 
-}
-
-function GetAccount() {
     const [userAccount, setAccount] = useState('');
     const [userBalance, setBalance] = useState('');
-    const token = localStorage.getItem("accessToken")
+    
+    function GetAccount() {
+        const token = localStorage.getItem("accessToken")
 
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-    axios.get('/api/account/lookup')
-        .then((Response) => {
-                setAccount(JSON.stringify(Response.data.accountNumber))
-                setBalance(JSON.stringify(Response.data.balance))
-            })
-        .catch((Error) => { console.log(Error) }) 
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+        axios.get('/api/account/lookup')
+            .then((Response) => {
+                    // 계좌번호
+                    setAccount(account => JSON.stringify(Response.data.accountNumber).slice(1, -1))
+                    // 잔액
+                    setBalance(JSON.stringify(Response.data.balance))
+                })
+            .catch((Error) => { console.log(Error) }) 
+        return (
+            <div>
+                <div><h1>계좌 번호 </h1></div>
+                <div>{ userAccount }</div>
+                <div> { userBalance }원</div>
+            </div>
+        )
+    }
+
     return (
-        <div>
-            <span>{ userAccount }</span>
-            <span>{ userBalance } 원</span>
+        <div className='t_body'>
+                <h1>잔액 조회</h1>
+            <div className='Check_Balance'>
+                <div className='accountArea'><GetAccount/></div>
+                <div><M_Chart/></div>
+            </div>
+            <Board ></Board>
         </div>
     )
 }
+
+// function clicked() {
+//     console.log("클릭됨");
+//     const token = localStorage.getItem("accessToken")
+
+//     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+//     axios.post('/api/user/info')
+//         .then((Response) => {
+//             console.log(JSON.stringify(Response.data.name))
+//         })
+//     .catch((Error)=>{console.log(Error)})
+// }
+
 
 
 class M_Chart extends Component {
@@ -59,7 +62,7 @@ class M_Chart extends Component {
         this.state = {
             series: [{
                 name: "소비금액",
-                data: [24, 41, 35, 51, 49, 62, 34, 91, 26, 78, 53, 85]
+                data: [24, 41, 35, 51, 49, 62, 35, 91, 26, 78, 53, 85]
             }],
 
         options: {  
