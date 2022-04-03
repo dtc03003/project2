@@ -8,6 +8,8 @@ import Error from "./components/views/Error/Error";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import SignupPage from "./components/views/SignupPage/SignupPage";
 import TransferPage from "./components/views/TransferPage/TransferPage";
+import LoadingPage from "./components/views/LandingPage/LoadingPage";
+import ResultPage from "./components/views/LandingPage/ResultPage"
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/loading" element={<LoadingPage />} />
+          <Route exact path="/result" element={<ResultPage />} />
           <Route exact path="/main" element={<MainPage />} />
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />

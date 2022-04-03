@@ -7,6 +7,9 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
+    "@react-spring/three": "^9.4.4",
+    "@react-three/drei": "^8.20.2",
+    "@react-three/fiber": "^7.0.26",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -25,8 +28,10 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "recordrtc": "^5.6.2",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.4.1",
+    "three": "^0.139.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
