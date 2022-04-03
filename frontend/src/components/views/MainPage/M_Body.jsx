@@ -12,7 +12,7 @@ export default function M_Body() {
 
       <div className='quickMenu'>
         <ul className='listQuickMenu'>
-          <li><Link to="/transfer"><span className='icoSearch'>조회하기</span></Link></li>
+          <li><Link to="/checkbalance"><span className='icoSearch'>조회하기</span></Link></li>
           <li><a href=""><span className='icoTransfer'>이체하기</span></a></li>
           <li><a href=""><span className='icoLoan'>대출</span></a></li>
           <li><a href=""><span className='icoBank'>뱅킹관리</span></a></li>

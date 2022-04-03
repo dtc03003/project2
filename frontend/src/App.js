@@ -7,7 +7,11 @@ import NotFound from "./components/views/NotFound/NotFound";
 import Error from "./components/views/Error/Error";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import SignupPage from "./components/views/SignupPage/SignupPage";
-import TransferPage from "./components/views/TransferPage/TransferPage";
+import CheckBalancePage from "./components/views/CheckBalancePage/CheckBalance";
+
+import Transferpage from './components/views/TransferPage/TransferPage';
+import LoadingPage from "./components/views/LandingPage/LoadingPage";
+import ResultPage from "./components/views/LandingPage/ResultPage"
 
 import DepositPage from "./components/views/DepositPage/DepositPage";
 import DepositKidPage from "./components/views/DepositAgesPage/DepositKidPage";
@@ -15,6 +19,7 @@ import DepositAdultPage from "./components/views/DepositAgesPage/DepositAdultPag
 import DepositElderPage from "./components/views/DepositAgesPage/DepositElderPage";
 
 import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
+import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
 
 function App() {
   return (
@@ -22,16 +27,26 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/loading" element={<LoadingPage />} />
+          <Route exact path="/result" element={<ResultPage />} />
           <Route exact path="/main" element={<MainPage />} />
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />
+
           <Route exact path="/transfer" element={<TransferPage />} />
+
+          <Route exact path="/checkbalance" element={<CheckBalancePage />} />
+          <Route exact path="/faceai" element={<FaceAIPage />} />
+          <Route exact path="/transfer" element={<Transferpage />} />
+
           <Route exact path="/deposit" element={<DepositPage />} />
           <Route exact path="/depositkid" element={<DepositKidPage />} />
           <Route exact path="/depositadult" element={<DepositAdultPage />} />
           <Route exact path="/depositelder" element={<DepositElderPage />} />
 
           <Route exact path="/faceai" element={<FaceAIPage />} />
+
+          <Route exact path="/faceloading" element={<FaceLoadingPage />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
