@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import DeGoldLifeCard from "./DeGoldLifeCard";
 import DeGoldLifeCard2 from "./DeGoldLifeCard2";
 import DeGoldLifeCard3 from "./DeGoldLifeCard3";
+import Footer from "../MainPage/Footer";
 
 const DepositElderPage = () => {
   return (
@@ -47,6 +48,7 @@ const DepositElderPage = () => {
         <DeGoldLifeCard2></DeGoldLifeCard2>
         <DeGoldLifeCard3></DeGoldLifeCard3>
       </Box>
+      <Footer></Footer>
     </div>
   );
 };
