@@ -9,7 +9,7 @@ import {
 } from './types';
 
 
-const USER_URL = 'http://j6d201.p.ssafy.io:9000/api/user';
+const USER_URL = 'https://j6d201.p.ssafy.io:9000/api/user';
 
 export function loginUser(Id,Password) { //body에 넣어준 값들을 파라미터를 통해서 받아준다.
 
