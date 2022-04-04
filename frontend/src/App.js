@@ -17,7 +17,6 @@ import DepositPage from "./components/views/DepositPage/DepositPage";
 import DepositKidPage from "./components/views/DepositAgesPage/DepositKidPage";
 import DepositAdultPage from "./components/views/DepositAgesPage/DepositAdultPage";
 import DepositElderPage from "./components/views/DepositAgesPage/DepositElderPage";
-import DeCard from "./components/views/DepositAgesPage/DeCard";
 
 import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
 import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
@@ -43,7 +42,6 @@ function App() {
           <Route exact path="/depositadult" element={<DepositAdultPage />} />
           <Route exact path="/depositelder" element={<DepositElderPage />} />
           
-          <Route exact path="/decard" element={<DeCard />} />
           
 
           <Route exact path="/faceai" element={<FaceAIPage />} />

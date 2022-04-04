@@ -136,7 +136,7 @@ export default function VerticalTabs() {
               color: "darkblue",
             }}
           >
-            S-Youth 적금 | 최고 연 2.9% (12개월)
+            S-Youth 적금 | 최고 연 2.3% (12개월)
           </Button>
         </div>
       </TabPanel>
