@@ -44,7 +44,7 @@ export default function sori_Result() {
   return(
     <div className='LandingFull'>
       <SpeechBubble />
-      <Canvas  colorManagement shadowMap camera={{position: [0,0,8], fov:50}}>
+      <Canvas style={{ height: '96vh', width: '100vw' }} colorManagement shadowMap camera={{position: [0,0,8], fov:50}}>
         <CameraControls />
         <directionalLight intensity={1} />
         <ambientLight intensity={0.6} />

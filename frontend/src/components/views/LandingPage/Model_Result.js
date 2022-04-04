@@ -31,6 +31,7 @@ export default function Model({ ...props }) {
         <mesh geometry={nodes.구체001_17.geometry} material={materials['______________.001']} />
         <mesh geometry={nodes.구체001_18.geometry} material={materials['Suit.001']} />
         <mesh geometry={nodes.구체001_19.geometry} material={materials['wire_135059008.001']} />
+        <mesh geometry={nodes.구체001_20.geometry} material={materials['매테리얼.010']} />
       </group>
     </group>
   )

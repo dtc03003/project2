@@ -264,9 +264,18 @@
 
 // export default RecorderJSDemo;
 // import "./styles.css";
+
+// alert 창 추가 
+// 처음 랜딩페이지에 캐릭터 뜨면서 도와드린다 이야기 설명(alert) 후 녹음 버튼에 대한 설명(alert)
+// 녹음 버튼을 누르면 alert ex) 원하고자 하는 말을 하고 10초 뒤에 정지버튼을 눌러주세요
+// 중간 로딩화면 딱히 없고, 가능하면 시간 몇초남았는지 (누나가 주기로함)
+// 결과 창에서 set Timeout, alert을 주고 확인을 누르면(Toast도 있음) 결과 화면 보이기(폐기)
+// 말풍선에 set Timeout을 주기 넌 할 수 있다.
+
+// 로그인 컴포넌트로 땡겨오기, root, body 수정
 import RecordRTC from "recordrtc";
 import { useEffect, useState, useRef } from "react";
-import Landing from "./Landing.css"
+
 const PER_MS = 10000;
 const MicToWebPage = () => {
   const [recording, setRecording] = useState(false);

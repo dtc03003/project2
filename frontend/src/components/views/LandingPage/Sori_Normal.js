@@ -2,7 +2,6 @@ import * as THREE from "three"
 import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import Model_Normal from "./Model_Normal"
-import Sori_final from "./Sori_final"
 import { Stars, OrbitControls } from "@react-three/drei";
 import MicToWebPage from './MicToWebPage';
       
@@ -36,16 +35,14 @@ function Rig() {
 export default function sori_Normal() {
   return(
     <div className='LandingFull'>
-      <Canvas  colorManagement shadowMap camera={{position: [0,0,8], fov:30}}>
+      <Canvas style={{ height: '90vh', width: '100vw' }} colorManagement shadowMap camera={{position: [0,0,8], fov:30}}>
         <CameraControls />
         {/* <OrbitControls/> */}
         <directionalLight intensity={1} />
         <ambientLight intensity={0.6} />
         <spotLight position={[10, 15, 10]} angle={1} />
         <Suspense fallback={null}>
-          {/* <Model_Normal onClick={(e) => console.log("클릭")}/> */}
-          <Sori_final />
-          {/* <Sori onClick={(e) => console.log("클릭")}/> */}
+          <Model_Normal onClick={(e) => console.log("클릭")}/>
         </Suspense>
         <Rig />
         

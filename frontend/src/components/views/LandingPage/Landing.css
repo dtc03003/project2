@@ -3,23 +3,13 @@
     box-sizing: border-box;
   }
   
-  html,
-  body {
-    overflow: hidden;
+  .L-body {
     width: 100%;
     height: 100%;
-    /* background: linear-gradient(#ffffff, #99cffc); */
-  }
-  #root {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(#ffffff, #99cffc);
   }
   .LandingFull {
     width: 100%;
-    height: 93%;
+    height: 100%;
     z-index: 1;
     background: linear-gradient(#ffffff, #99cffc);
   }
@@ -27,7 +17,7 @@
     z-index: 3;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 2vh;
   }
   .MicBtn {
     width: 100px;
