@@ -176,7 +176,7 @@ function SignupPage(props) {
   const idCheck = () => {
     axios({
       method: "get",
-      url: `https://j6d201.p.ssafy.io:9000/api/user/duplicate/id/id=${Id}`,
+      url: `http://j6d201.p.ssafy.io:9000/api/user/duplicate/id/id=${Id}`,
     })
       .then((res) => {
         if (res.data.data === false) {
@@ -194,7 +194,7 @@ function SignupPage(props) {
   const emailCheck = () => {
     axios({
       method: "get",
-      url: `https://j6d201.p.ssafy.io:9000/api/user/duplicate/email/email=${Email}`,
+      url: `http://j6d201.p.ssafy.io:9000/api/user/duplicate/email/email=${Email}`,
     })
       .then((res) => {
         if (res.data.data === false) {
