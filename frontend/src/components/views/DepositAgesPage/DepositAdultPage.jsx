@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import DeAdultCard from "./DeAdultCard";
 import DeAdultCard2 from "./DeAdultCard2";
 import DeAdultCard3 from "./DeAdultCard3";
+import Footer from "../MainPage/Footer";
 
 const DepositAdultPage = () => {
   return (
@@ -47,6 +48,7 @@ const DepositAdultPage = () => {
         <DeAdultCard2></DeAdultCard2>
         <DeAdultCard3></DeAdultCard3>
       </Box>
+      <Footer></Footer>
     </div>
   );
 };
