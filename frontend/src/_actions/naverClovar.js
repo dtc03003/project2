@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://j6d201.p.ssafy.io:9000/api/ai";
+const BASE_URL = "https://j6d201.p.ssafy.io:9000/api/ai";
 // const BASE_URL = "http://localhost:9000/api/ai";
 
 export function faceAI(image) {
