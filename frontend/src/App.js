@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import LandingPage from "./components/views/LandingPage/LandingPage";
+import Test from "./components/views/LandingPage/Test";
 import MainPage from "./components/views/MainPage/MainPage";
 import NotFound from "./components/views/NotFound/NotFound";
 import Error from "./components/views/Error/Error";
@@ -27,6 +28,7 @@ function App() {
     <ErrorBoundary FallbackComponent={<Error />}>
       <BrowserRouter>
         <Routes>
+          <Route exact path="/test" element={<Test />} />
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/loading" element={<LoadingPage />} />
           <Route exact path="/result" element={<ResultPage />} />
