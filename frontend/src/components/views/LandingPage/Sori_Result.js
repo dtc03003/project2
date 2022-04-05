@@ -4,6 +4,12 @@ import { Canvas, useFrame,  useThree } from "@react-three/fiber";
 import Model_Result from "./Model_Result"
 import { OrbitControls } from "@react-three/drei";
 import Speech_Bubble from "../../../assets/Speech_Bubble.jpg"
+import './Alert/ToastAlert.css'
+import TransferToast from './Alert/TransferToast'
+import CheckToast from './Alert/CheckToast'
+import FaceToast from './Alert/FaceToast'
+import DepositToast from "./Alert/DepositToast";
+
 
 const CameraControls = () => {
   const {
@@ -26,7 +32,6 @@ const CameraControls = () => {
 };
 
 const SpeechBubble = () => {
-  setTimeout(() => {}, 3000)
   return (
     <div className="Speech_Bubble">
       <img src={Speech_Bubble} alt="Speech_Bubble"/>
@@ -40,6 +45,19 @@ function Rig() {
   })
 }
 
+function BubbleData() {
+  let data = '조회'
+  if (data == '조회') {
+    return CheckToast();
+  } else if (data == '이체') {
+    return TransferToast();
+  } else if (data == '상품') {
+    return DepositToast();
+  } else if (data == '추천') {
+    return FaceToast();
+  }
+}
+
 export default function sori_Result() {
   return(
     <div className='LandingFull'>
@@ -50,7 +68,9 @@ export default function sori_Result() {
         <ambientLight intensity={0.6} />
         <spotLight position={[10, 15, 10]} angle={1} />
         <Suspense fallback={null}>
-          <Model_Result onClick={(e) => console.log("클릭")}/>
+          <Model_Result onClick={() =>
+            BubbleData()
+          }/>
         </Suspense>
         <Rig />
       </Canvas>
