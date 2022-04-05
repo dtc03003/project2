@@ -489,8 +489,6 @@ function SignupPage(props) {
                     variant='contained'
                   >회원가입</Button>
                 </div>
-
-                <div style={{ marginTop: "30px" }} class="hr"></div>
                 <div class="foot-lnk">
                   <label
                     style={{ fontSize: "20px" }}

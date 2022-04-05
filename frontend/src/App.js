@@ -21,6 +21,7 @@ import DepositElderPage from "./components/views/DepositAgesPage/DepositElderPag
 import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
 import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
 
+
 function App() {
   return (
     <ErrorBoundary FallbackComponent={<Error />}>
@@ -42,7 +43,7 @@ function App() {
           <Route exact path="/depositadult" element={<DepositAdultPage />} />
           <Route exact path="/depositelder" element={<DepositElderPage />} />
           
-          
+
 
           <Route exact path="/faceai" element={<FaceAIPage />} />
 

@@ -39,7 +39,7 @@ a{display:inline-block;line-height:1.3}
 .m_body .quickMenu .listQuickMenu a:hover .icoBank:after{background-position:-134px -32px}
 
 .sub_cont {width:940px; margin:0 auto; padding-top: 60px;overflow:hidden}
-.main_notice {margin-top:29px;font-size:13px;overflow:hidden}
+.main_notice {margin-top:29px;font-size:17px;overflow:hidden}
 .main_notice div{float:left;position:relative;padding-left:20px}
 .main_notice div+div+div{min-width:initial}
 .main_notice div:first-child{padding-right:0px;}
