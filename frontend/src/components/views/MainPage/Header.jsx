@@ -12,7 +12,7 @@ export default function Header() {
         <h1 className="logo">
           <Link to="/main">
             {/* 로고 변경예정 */}
-            <img src="https://www.kbanknow.com/resource/img/reform/layout/logo_kbank.png"></img>
+            <img style={{width:'9.5vh', height:'4.5vh'}} src="img/SBankbackremove.png"></img>
           </Link>
         </h1>
 
