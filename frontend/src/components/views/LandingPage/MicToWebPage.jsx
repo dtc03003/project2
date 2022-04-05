@@ -275,6 +275,9 @@
 // 로그인 컴포넌트로 땡겨오기, root, body 수정
 import RecordRTC from "recordrtc";
 import { useEffect, useState, useRef } from "react";
+import RecordClick from "./Alert/RecordClick"
+import RecordStop from "./Alert/RecordStop"
+
 
 const PER_MS = 10000;
 const MicToWebPage = () => {
@@ -301,7 +304,6 @@ const MicToWebPage = () => {
                 console.log("Server returned: ", e.target.responseText);
               }
             };
-
             var fd = new FormData();
             fd.append("file", blob, "voiceCommand");
             xhr.open("POST", "http://127.0.0.1:8000/api/ai/voiceCommand", true)
@@ -312,23 +314,23 @@ const MicToWebPage = () => {
   }, []);
 
   return (
-    <div className="Mic"><button className="MicBtn"
-    onClick={() => {
-      setRecording((prev) => {
-        if (!prev) {
-          recorder.current.startRecording();
-        } else {
-          recorder.current.stopRecording();
-          // setTimeout(function() {window.location.reload();},3000);
-          window.location.href='/loading';          
+    <div className="Mic">
+      <button className="MicBtn" 
+        onClick={() => {
+          setRecording(() => {
+            
+            recorder.current.startRecording(); 
+            RecordClick()
+              
+            setTimeout(() => {
+              recorder.current.stopRecording();
+              RecordStop()
+            }, 11000 )
+          })
+          }
         }
-
-        return !prev;
-      });
-    }}
-  >
-    {recording ? "정지" : "녹음"}
-  </button></div>
+      >녹음</button>
+    </div>
   )
 }
 

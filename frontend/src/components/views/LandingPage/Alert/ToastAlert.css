@@ -1,0 +1,33 @@
+ 
+  .position-absolute {
+    position: absolute;
+  }
+
+  body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+    top: 30%;
+    right: 0;
+    left: 45%;
+}
+  .swal2-container {
+    height: 100%;
+  }
+  .swal-container {
+    height: 25%;
+  }
+  .swal2-popup.swal2-toast .swal2-icon {
+    width: 4em;
+    height: 4em;
+  }
+
+  .swal2-popup.swal2-toast .swal2-html-container {
+    font-size: 2em;
+    align-items: center;
+  }
+
+  body.swal2-toast-shown .swal2-container {
+    width: 800px;
+  }
+
+  .swal2-popup.swal2-toast .swal2-actions {
+    justify-content: space-evenly;
+  }

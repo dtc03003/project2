@@ -2,9 +2,9 @@ import * as THREE from "three"
 import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import Model_Normal from "./Model_Normal"
-import { Stars, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import MicToWebPage from './MicToWebPage';
-      
+import NomSoriClick from "./Alert/NomSoriClick";
 
 const CameraControls = () => {
   const {
@@ -17,7 +17,7 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       enableZoom={false}
-
+      enabled={false}
       maxAzimuthAngle={Math.PI / 4}
       maxPolarAngle={Math.PI / 2}
       minAzimuthAngle={-Math.PI / 4}
@@ -42,10 +42,9 @@ export default function sori_Normal() {
         <ambientLight intensity={0.6} />
         <spotLight position={[10, 15, 10]} angle={1} />
         <Suspense fallback={null}>
-          <Model_Normal onClick={(e) => console.log("클릭")}/>
+          <Model_Normal onClick={NomSoriClick}/>
         </Suspense>
         <Rig />
-        
       </Canvas>
       <MicToWebPage></MicToWebPage>
     </div>
