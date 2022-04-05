@@ -13,7 +13,7 @@ const DepositPage = () => {
       <Box
         style={{
           height: "50px",
-          backgroundColor: "aliceblue",
+          // backgroundColor: "aliceblue",
           padding: "3vh",
           fontSize: "2vh",
           paddingLeft: "9vh",
@@ -26,7 +26,7 @@ const DepositPage = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "aliceblue",
+          // backgroundColor: "aliceblue",
           paddingLeft: "13vh",
           fontWeight: "bolder",
           fontSize: "3vh",
@@ -43,7 +43,7 @@ const DepositPage = () => {
       <Box
         style={{
           height: "850px",
-          backgroundColor: "aliceblue",
+          // backgroundColor: "aliceblue",
           fontSize: "3vh",
           padding: "2vh",
         }}

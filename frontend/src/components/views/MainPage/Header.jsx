@@ -12,7 +12,7 @@ export default function Header() {
         <h1 className="logo">
           <Link to="/main">
             {/* 로고 변경예정 */}
-            <img src="https://www.kbanknow.com/resource/img/reform/layout/logo_kbank.png"></img>
+            <img style={{width:'9.5vh', height:'4.5vh'}} src="img/SBankbackremove.png"></img>
           </Link>
         </h1>
 
@@ -27,7 +27,7 @@ export default function Header() {
           {/* 추후 링크 추가 */}
           <li><Link to="/checkbalance">조회</Link></li>
           <li><Link to="/transfer">이체</Link></li>
-          <li><a href=''>대출</a></li>
+          <li><Link to="/deposit">금융상품</Link></li>
           <li><a href=''>뱅킹관리</a></li>
         </ul>
       </div>

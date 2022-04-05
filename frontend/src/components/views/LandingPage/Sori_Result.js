@@ -10,6 +10,35 @@ import CheckToast from './Alert/CheckToast'
 import FaceToast from './Alert/FaceToast'
 import DepositToast from "./Alert/DepositToast";
 
+const leftsori = require("../../../sound/좌측소리캐릭터.mp3");
+const SoundLeftSori = new Audio(leftsori);
+const playSoundLeftSori = () => {
+  SoundLeftSori.play();
+};
+
+const trans = require("../../../sound/이체페이지.mp3");
+const SoundTrans = new Audio(trans);
+const playSoundTrans = () => {
+  SoundTrans.play();
+};
+
+const checkba = require("../../../sound/조회페이지.mp3");
+const SoundCheckBa = new Audio(checkba);
+const playSoundCheckBa = () => {
+  SoundCheckBa.play();
+};
+
+const depo = require("../../../sound/금융상품페이지.mp3");
+const SoundDepo = new Audio(depo);
+const playSoundDepo = () => {
+  SoundDepo.play();
+};
+
+const facere = require("../../../sound/추천페이지.mp3");
+const SoundFaceRe = new Audio(facere);
+const playSoundFaceRe = () => {
+  SoundFaceRe.play();
+};
 
 const CameraControls = () => {
   const {
@@ -47,18 +76,23 @@ function Rig() {
 
 function BubbleData() {
   let data = '조회'
-  if (data == '조회') {
-    return CheckToast();
-  } else if (data == '이체') {
-    return TransferToast();
-  } else if (data == '상품') {
-    return DepositToast();
-  } else if (data == '추천') {
-    return FaceToast();
+  if (data === '조회') {
+    return CheckToast() && playSoundCheckBa();
+  } else if (data === '이체') {
+    return TransferToast() && playSoundTrans();
+  } else if (data === '상품') {
+    return DepositToast() && playSoundDepo();
+  } else if (data === '추천') {
+    return FaceToast() && playSoundFaceRe();
   }
 }
 
+
+
+
+
 export default function sori_Result() {
+  playSoundLeftSori()
   return(
     <div className='LandingFull'>
       <SpeechBubble />
