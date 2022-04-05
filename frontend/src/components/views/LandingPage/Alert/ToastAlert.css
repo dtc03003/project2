@@ -20,8 +20,9 @@
   }
 
   .swal2-popup.swal2-toast .swal2-html-container {
-    font-size: 2em;
+    font-size: 1.6em;
     align-items: center;
+    overflow: hidden;
   }
 
   body.swal2-toast-shown .swal2-container {
