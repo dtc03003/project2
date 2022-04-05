@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import { run as runHolder } from 'holderjs/holder';
 import { Link } from "react-router-dom";
 import styles from './MainPage.css'
+import { Box } from '@mui/material';
 
 export default function M_Body() {
 
@@ -14,7 +15,7 @@ export default function M_Body() {
         <ul className='listQuickMenu'>
           <li><Link to="/checkbalance"><span className='icoSearch'>조회하기</span></Link></li>
           <li><a href=""><span className='icoTransfer'>이체하기</span></a></li>
-          <li><a href=""><span className='icoLoan'>대출</span></a></li>
+          <li><Link to="/deposit"><span className='icoLoan'>금융상품</span></Link></li>
           <li><a href=""><span className='icoBank'>뱅킹관리</span></a></li>
         </ul>
       </div>
@@ -86,42 +87,31 @@ function Carousel1() {
 
   return (
     <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/1600x500?text=First slide&bg=373940"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/1600x500?text=Second slide&bg=282c34"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/1600x500?text=Third slide&bg=20232a"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+  <Carousel.Item>
+    <Box style={{display:'flex',justifyContent:'center',alignContent:'center',flexWrap:'wrap'}}>
+    <img
+      className="d-block w-100"
+      src="img/mainimg1.png"
+      alt="First slide"
+    />
+      <img style={{position:'absolute', paddingTop:'6.7%', zIndex:2,width:'28.5%'}} src="img/가까이.gif"></img>
+      </Box>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="img/mainimg3.png"
+      alt="Second slide"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="img/mainimg4.png"
+      alt="Third slide"
+    />
+  </Carousel.Item>
+</Carousel>
   )
 }
 
