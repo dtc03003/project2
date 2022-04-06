@@ -5,6 +5,7 @@ import DeKidCard from "./DeKidCard";
 import DeKidCard2 from "./DeKidCard2";
 import DeKidCard3 from "./DeKidCard3";
 import Footer from "../MainPage/Footer";
+import MiniSori from "../MainPage/MiniSori";
 
 const DepositKidPage = () => {
   return (
@@ -48,6 +49,7 @@ const DepositKidPage = () => {
         <DeKidCard2></DeKidCard2>
         <DeKidCard3></DeKidCard3>
       </Box>
+      <MiniSori></MiniSori>
       <Footer></Footer>
     </div>
   );

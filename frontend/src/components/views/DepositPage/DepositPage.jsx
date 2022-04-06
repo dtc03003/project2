@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import "./DepositPage.css";
 import DepositTable from "./DepositTable";
 import Footer from "../MainPage/Footer";
+import MiniSori from "../MainPage/MiniSori";
 
 const DepositPage = () => {
   return (
@@ -63,6 +64,7 @@ const DepositPage = () => {
         </Box>
         <DepositTable></DepositTable>
       </Box>
+      <MiniSori></MiniSori>
       <Footer></Footer>
     </div>
   );
