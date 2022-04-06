@@ -51,6 +51,7 @@ function LoginState() {
     console.log("버튼 클릭됨")
     localStorage.clear();
     navigate('/');
+
   };
   
   return (

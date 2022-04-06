@@ -3,6 +3,12 @@ import FaceLoading from "../../../assets/faceLoading.gif"
 import "./FaceAI.css";
 
 const FaceLoadingPage = () => {
+  const load = require("../../../sound/분석중.mp3");
+  const SoundLoading = new Audio(load);
+  const playSoundLoading = () => {
+    SoundLoading.play();
+  };
+  playSoundLoading();
   setTimeout(() => {
     moveInfo();
   }, 5000)
@@ -22,7 +28,7 @@ function moveInfo() {
   if(age != null) {
       if(age < 20) {
           window.location.href ='/depositkid';
-      }else if(age < 40) {
+      }else if(age < 50) {
           window.location.href = '/depositadult';
       }else {
           window.location.href = '/depositelder';
@@ -30,4 +36,4 @@ function moveInfo() {
   }
 }
 
-export default FaceLoadingPage
+export default FaceLoadingPage;

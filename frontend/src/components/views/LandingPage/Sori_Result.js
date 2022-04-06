@@ -67,21 +67,18 @@ function Rig() {
 }
 
 function BubbleData() {
-  let data = '조회'
-  if (data === '조회') {
+  const Voice = sessionStorage.getItem("VoiceText");
+  
+  if (Voice === '"조회"') {
     return CheckToast() && playSoundCheckBa();
-  } else if (data === '이체') {
+  } else if (Voice === '"이체"') {
     return TransferToast() && playSoundTrans();
-  } else if (data === '상품') {
+  } else if (Voice === '"상품"') {
     return DepositToast() && playSoundDepo();
-  } else if (data === '추천') {
+  } else if (Voice === '"추천"') {
     return FaceToast() && playSoundFaceRe();
   }
 }
-
-
-
-
 
 export default function sori_Result() {
   playSoundLeftSori()
