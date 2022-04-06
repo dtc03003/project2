@@ -18,7 +18,7 @@ export default function T_Body() {
         const token = localStorage.getItem("accessToken")
 
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-        axios.get('http://j6d201.p.ssafy.io:9000/api/account/lookup')
+        axios.get('/api/account/lookup')
             .then((Response) => {
                     // 계좌번호
                     setAccount(account => JSON.stringify(Response.data.accountNumber).slice(1, -1))
@@ -39,7 +39,7 @@ export default function T_Body() {
         const token = localStorage.getItem("accessToken")
 
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-        axios.get('http://j6d201.p.ssafy.io:9000/api/account/find/account/consumption/history/2022')
+        axios.get('/api/account/find/account/consumption/history/2022')
             .then((Response) => { 
                 setHistory(JSON.stringify(Response.data))
                 console.log(userHistory)
@@ -47,7 +47,7 @@ export default function T_Body() {
     }
 
     return (
-        <div className='t_body'>
+        <div className='c_body'>
                 <h1>잔액 조회</h1>
             <div className='Check_Balance'>
                 <div className='accountArea'><GetAccount/></div>
