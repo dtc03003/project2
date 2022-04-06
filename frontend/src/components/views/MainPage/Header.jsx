@@ -54,9 +54,9 @@ function LoginState() {
   };
   
   return (
-    <div>
-        <button onClick={isLogout}>로그아웃</button>
-        <p>{userName} 님 환영합니다.</p>
+    <div style={{display:'flex',flexDirection:'row-reverse'}}>
+        <button onClick={isLogout} style={{border:'none',borderRadius:'20px',color:'white',background:'rgb(0, 119, 255)'}}>로그아웃</button>
+        <p style={{margin:'5px'}}>{userName} 님 환영합니다.</p>
     </div>
   )
 }
