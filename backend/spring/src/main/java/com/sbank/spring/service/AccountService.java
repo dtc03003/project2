@@ -11,6 +11,7 @@ import javax.transaction.Transactional;
 import com.sbank.spring.dto.AccountDto;
 import com.sbank.spring.dto.DepositDto;
 import com.sbank.spring.dto.HistoryDto;
+import com.sbank.spring.dto.NewHistoryDto;
 import com.sbank.spring.dto.TransferDto;
 import com.sbank.spring.entity.Account;
 import com.sbank.spring.entity.History;
@@ -100,9 +101,13 @@ public class AccountService {
     }
 
     @Transactional //내역 조회
-    public List<History> recordHistory(String accountNumber) {
+    public List<NewHistoryDto> recordHistory(String accountNumber) {
         Account account = accountRepository.findByAccountNumber(accountNumber);
-        return historyRepository.findByAccountIdOrderByTransactionDateDesc(account.getAccountId());
+        List<History> hlist = historyRepository.findByAccountIdOrderByTransactionDateDesc(account.getAccountId());
+        List<NewHistoryDto> list = new ArrayList<NewHistoryDto>();
+        for(History h : hlist)
+            list.add(NewHistoryDto.from(h));
+        return list;
     }
 
     @Transactional //이름으로 계좌번호 조회
