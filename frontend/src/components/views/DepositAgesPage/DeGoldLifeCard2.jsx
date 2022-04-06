@@ -19,14 +19,14 @@ const DeGoldLifeCard2 = () => {
        {/* <h1 class="text-shadow">MOUNTAIN</h1> */}
     </div>
     <br></br>
-    <div class="back" style={{color:'black', paddingLeft:'2vh'}}> 
+    <div class="back" style={{color:'white', paddingLeft:'2vh'}}> 
        <h4 style={{fontWeight:'bold'}}>S-골든라이프연금우대예금</h4>
        <div>
        <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 1.7%(12개월)</h6>
-       <h6 style={{paddingTop:'1vh'}}>연금이체하면 우대 이율</h6>
-       <h6 style={{paddingTop:'1vh'}}>자격충족 시 민영주택청약,국민주택청약 모두 가능한 통장입니다.</h6>
-       <h6 style={{paddingTop:'1vh'}}>최대 96만원까지 연말정산 소득공제 혜택</h6>
-       <h6 style={{paddingTop:'1vh'}}>저축하며 내 집 마련하는 만능청약통장</h6>
+       <h6 style={{paddingTop:'1vh'}}>연금이체하면 우대이율 제공</h6>
+       <h6 style={{paddingTop:'1vh'}}>월 1만원 ~ 3백만원</h6>
+       <h6 style={{paddingTop:'1vh'}}>특별중도해지서비스 제공</h6>
+       <h6 style={{paddingTop:'1vh'}}>해지서비스 사유: 예금주 본인의 회갑, 칠순, 팔순, 창업, 퇴직, 입원(3일 이상), 해외여행, 이사</h6>
        </div>
     </div>
 </div>

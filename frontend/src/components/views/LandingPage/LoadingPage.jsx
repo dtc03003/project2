@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Loading from "../../../assets/Loading.gif";
 
 const LoadingPage = () => {
-  const load = require("../../../sound/분석중.mp3");
+  const load = require("../../../sound/요청사항확인중.mp3");
   const SoundLoading = new Audio(load);
   const playSoundLoading = () => {
     SoundLoading.play();
@@ -35,7 +35,7 @@ const LoadingPage = () => {
       </div>
       <div className="loading">
         <img src={Loading} alt="Loading" />
-        <h1>분석중입니다! 잠시만 기다려주세요...</h1>
+        <h1>요청하신 사항을 확인하고 있습니다. 잠시만 기다려주세요...</h1>
       </div>
     </div>
   );

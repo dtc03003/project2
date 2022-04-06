@@ -19,14 +19,14 @@ const DeGoldLifeCard = () => {
        {/* <h1 class="text-shadow">MOUNTAIN</h1> */}
     </div>
     <br></br>
-    <div class="back" style={{color:'black', paddingLeft:'2vh'}}> 
-       <h4 style={{fontWeight:'bold'}}>S-골든라이프연금우대적금</h4>
+    <div class="back" style={{color:'white', paddingLeft:'2vh'}}> 
+       <h4 style={{fontWeight:'bold'}}>내 아이를 위한 280일 적금</h4>
        <div>
-       <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 2.15%(12개월)</h6>
-       <h6 style={{paddingTop:'1vh'}}>내 집 마련 첫 걸음,주택청약종합저축</h6>
-       <h6 style={{paddingTop:'1vh'}}>자격충족 시 민영주택청약,국민주택청약 모두 가능한 통장입니다.</h6>
-       <h6 style={{paddingTop:'1vh'}}>최대 96만원까지 연말정산 소득공제 혜택</h6>
-       <h6 style={{paddingTop:'1vh'}}>저축하며 내 집 마련하는 만능청약통장</h6>
+       <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 2.5%(12개월)</h6>
+       <h6 style={{paddingTop:'1vh'}}>태어날 아이를 위한 임산부 맞춤형 상품</h6>
+       <h6 style={{paddingTop:'1vh'}}>출산을 앞둔 아이와 교감하는 280일 동안 전용화면을 통해 육아 관련 부가서비스 제공</h6>
+       <h6 style={{paddingTop:'1vh'}}>월 1만원~100만원</h6>
+       <h6 style={{paddingTop:'1vh'}}>자유적립식 예금</h6>
        </div>
     </div>
 </div>

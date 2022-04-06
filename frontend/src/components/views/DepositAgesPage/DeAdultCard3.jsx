@@ -19,14 +19,14 @@ const DeAdultCard3 = () => {
        {/* <h1 class="text-shadow">MOUNTAIN</h1> */}
     </div>
     <br></br>
-    <div class="back" style={{color:'black', paddingLeft:'2vh'}}> 
-       <h4 style={{fontWeight:'bold'}}>S-골든라이프연금우대적금</h4>
+    <div class="back" style={{color:'white', paddingLeft:'2vh'}}> 
+       <h4 style={{fontWeight:'bold'}}>S-마이핏 통장</h4>
        <div>
-       <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 2.15%(12개월)</h6>
-       <h6 style={{paddingTop:'1vh'}}>내 집 마련 첫 걸음,주택청약종합저축</h6>
-       <h6 style={{paddingTop:'1vh'}}>자격충족 시 민영주택청약,국민주택청약 모두 가능한 통장입니다.</h6>
-       <h6 style={{paddingTop:'1vh'}}>최대 96만원까지 연말정산 소득공제 혜택</h6>
-       <h6 style={{paddingTop:'1vh'}}>저축하며 내 집 마련하는 만능청약통장</h6>
+       <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 1.5%(12개월)</h6>
+       <h6 style={{paddingTop:'1vh'}}>통장에 넣기만 해도 연이율과 출금,이체 수수료 면제까지</h6>
+       <h6 style={{paddingTop:'1vh'}}>생활비 박스로 지출목표금액을 정해 계획적인 소비 관리</h6>
+       <h6 style={{paddingTop:'1vh'}}>비상금 박스로 연 1.5%</h6>
+       <h6 style={{paddingTop:'1vh'}}>만 18세 이상 만 38세 이하 실명의 개인(1인 1계좌)</h6>
        </div>
     </div>
 </div>

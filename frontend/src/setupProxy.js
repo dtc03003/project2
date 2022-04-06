@@ -17,4 +17,8 @@ module.exports = function(app) {
       changeOrigin: true,
     })
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 72de7e779f9338176e78b381380d80ac4eef4600
