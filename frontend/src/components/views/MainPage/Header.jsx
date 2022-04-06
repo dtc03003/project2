@@ -68,7 +68,7 @@ function UnLoginState() {
         <Link to="/login">로그인</Link>
       </span>
       <span>
-        <Link to="/signup">회원가입</Link>
+        <Link to="/signup" style={{textDecoration:'none',color:'black',paddingLeft:'1vh'}}>회원가입</Link>
       </span>
     </div>
   );
