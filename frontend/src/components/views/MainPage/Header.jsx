@@ -37,14 +37,10 @@ export default function Header() {
 
 function LoginState() {
   const [userName, setUserName] = useState('');
-  const BASE_URL = "https://j6d201.p.ssafy.io:9000";
   const token = localStorage.getItem("accessToken")
-  const headers = {
-    "Access-Control-Allow-Origin" : "*",
-    'Authorization' : `Bearer ${token}`
-  }
-    // axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-    axios.post(`${BASE_URL}/api/user/info`, {headers: headers})
+
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    axios.post('/api/user/info')
       .then((Response) => {
         setUserName(JSON.stringify(Response.data.name).slice(1, -1));
       })
@@ -55,6 +51,7 @@ function LoginState() {
     console.log("버튼 클릭됨")
     localStorage.clear();
     navigate('/');
+
   };
   
   return (
