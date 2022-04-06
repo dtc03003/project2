@@ -27,8 +27,9 @@
     height: 50px;
     font-size: 30px;
     color: white;
-    background-color: blue;
-    border-color: blue;
+    background-color: #1E90FF;
+    border-color: #1E90FF;
+    border-radius: 30px;
   }
   .loading {
     display: flex;

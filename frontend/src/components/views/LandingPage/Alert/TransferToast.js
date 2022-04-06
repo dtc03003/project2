@@ -17,6 +17,7 @@ export default function TransferToast() {
       confirmButtonText: '네',      
       denyButtonText: `아니요`,
       cancelButtonText: '취소',
+      confirmButtonColor: '#1E90FF',
       })
       .then((result) => {
         if (result.isConfirmed) {

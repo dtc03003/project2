@@ -13,7 +13,8 @@ export default function sori_Normal() {
         <ambientLight intensity={0.6} />
         <spotLight position={[10, 15, 10]} angle={1} />
         <Suspense fallback={null}>
-          <Sori_ani />
+          <Sori_ani 
+          />
         </Suspense>
       </Canvas>
     </div>

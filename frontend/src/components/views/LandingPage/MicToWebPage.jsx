@@ -45,7 +45,7 @@ const MicToWebPage = () => {
             };
             var fd = new FormData();
             fd.append("file", blob, "voiceCommand");
-            xhr.open("POST", "http://j6d201.p.ssafy.io:5555/api/ai/voiceCommand", true)
+            xhr.open("POST", "/fastapi/ai/voiceCommand", true)
               xhr.send(fd);
           }
         });

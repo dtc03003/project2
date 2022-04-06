@@ -11,6 +11,7 @@ export default function Model({ ...props }) {
   const { actions } = useAnimations(animations, group)
   useEffect(() => {
     console.log(actions);
+    
     actions.LipAnimation.play();
   })
   return (
