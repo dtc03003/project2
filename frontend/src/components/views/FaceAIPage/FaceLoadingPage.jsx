@@ -28,7 +28,7 @@ function moveInfo() {
   if(age != null) {
       if(age < 20) {
           window.location.href ='/depositkid';
-      }else if(age < 40) {
+      }else if(age < 50) {
           window.location.href = '/depositadult';
       }else {
           window.location.href = '/depositelder';
