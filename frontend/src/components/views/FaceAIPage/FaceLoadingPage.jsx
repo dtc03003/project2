@@ -3,6 +3,12 @@ import FaceLoading from "../../../assets/faceLoading.gif"
 import "./FaceAI.css";
 
 const FaceLoadingPage = () => {
+  const load = require("../../../sound/분석중.mp3");
+  const SoundLoading = new Audio(load);
+  const playSoundLoading = () => {
+    SoundLoading.play();
+  };
+  playSoundLoading();
   setTimeout(() => {
     moveInfo();
   }, 5000)
@@ -30,4 +36,4 @@ function moveInfo() {
   }
 }
 
-export default FaceLoadingPage
+export default FaceLoadingPage;
