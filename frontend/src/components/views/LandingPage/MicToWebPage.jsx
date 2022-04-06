@@ -42,6 +42,7 @@ const MicToWebPage = () => {
             xhr.onload = function (e) {
               if (this.readyState === 4) {
                 console.log("Server returned: ", e.target.responseText);
+                sessionStorage.setItem("VoiceText", e.target.responseText);
               }
             };
             var fd = new FormData();
