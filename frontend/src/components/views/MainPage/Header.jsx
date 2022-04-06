@@ -40,7 +40,7 @@ function LoginState() {
   const token = localStorage.getItem("accessToken")
 
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-    axios.post('/api/user/info')
+    axios.post('https://j6d201.p.ssafy.io:9000/api/user/info')
       .then((Response) => {
         setUserName(JSON.stringify(Response.data.name).slice(1, -1));
       })
