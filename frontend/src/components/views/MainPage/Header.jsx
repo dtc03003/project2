@@ -37,10 +37,14 @@ export default function Header() {
 
 function LoginState() {
   const [userName, setUserName] = useState('');
+  const BASE_URL = "https://j6d201.p.ssafy.io:9000";
   const token = localStorage.getItem("accessToken")
-
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-    axios.post('/api/user/info')
+  const headers = {
+    "Access-Control-Allow-Origin" : "*",
+    'Authorization' : `Bearer ${token}`
+  }
+    // axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    axios.post(`${BASE_URL}/api/user/info`, {headers: headers})
       .then((Response) => {
         setUserName(JSON.stringify(Response.data.name).slice(1, -1));
       })
