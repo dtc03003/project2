@@ -16,18 +16,19 @@ const DepositPage = () => {
           // backgroundColor: "aliceblue",
           padding: "3vh",
           fontSize: "2vh",
-          paddingLeft: "9vh",
+          paddingLeft: "11vh",
           fontWeight: "bolder",
         }}
       >
         금융상품
       </Box>
+      <hr style={{width:'17vh',marginLeft:'10vh'}}></hr>
       <Box
         style={{
           display: "flex",
           flexDirection: "column",
           // backgroundColor: "aliceblue",
-          paddingLeft: "13vh",
+          paddingLeft: "15vh",
           fontWeight: "bolder",
           fontSize: "3vh",
         }}
@@ -56,7 +57,7 @@ const DepositPage = () => {
             flexDirection: "column",
           }}
         >
-          S-bank 만의 특별한 테마상품
+          Sbank 만의 특별한 테마상품
           <br></br>
           <h5>각 연령대에 적합한 Sbank만의 특별한 테마 금융 서비스</h5>
         </Box>

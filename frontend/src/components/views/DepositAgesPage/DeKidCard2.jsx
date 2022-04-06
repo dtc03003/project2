@@ -19,14 +19,14 @@ const DeGoldLifeCard = () => {
        {/* <h1 class="text-shadow">MOUNTAIN</h1> */}
     </div>
     <br></br>
-    <div class="back" style={{color:'black', paddingLeft:'2vh'}}> 
-       <h4 style={{fontWeight:'bold'}}>S-골든라이프연금우대적금</h4>
+    <div class="back" style={{color:'white', paddingLeft:'2vh'}}> 
+       <h4 style={{fontWeight:'bold'}}>S-Youth 적금</h4>
        <div>
-       <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 2.15%(12개월)</h6>
-       <h6 style={{paddingTop:'1vh'}}>내 집 마련 첫 걸음,주택청약종합저축</h6>
-       <h6 style={{paddingTop:'1vh'}}>자격충족 시 민영주택청약,국민주택청약 모두 가능한 통장입니다.</h6>
-       <h6 style={{paddingTop:'1vh'}}>최대 96만원까지 연말정산 소득공제 혜택</h6>
-       <h6 style={{paddingTop:'1vh'}}>저축하며 내 집 마련하는 만능청약통장</h6>
+       <h6 style={{paddingTop:'1vh' ,fontWeight:'bold'}}>최고 연 2.3%(12개월)</h6>
+       <h6 style={{paddingTop:'1vh'}}>어린이부터 시작하는 꾸준한 적립식 금융 교육</h6>
+       <h6 style={{paddingTop:'1vh'}}>자녀가 성년이 될때 까지 장기거래 가능</h6>
+       <h6 style={{paddingTop:'1vh'}}>어린이/청소년을 위한 무료 보험가입서비스 제공</h6>
+       <h6 style={{paddingTop:'1vh'}}>월 저축금액 1만원~3백만원</h6>
        </div>
     </div>
 </div>
