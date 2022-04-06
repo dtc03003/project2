@@ -1,7 +1,5 @@
 package com.sbank.spring.dto;
 
-import javax.validation.constraints.NotNull;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,21 +12,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TransferDto {
-    
-    private String sender;
 
     private String senderAccount;
-
-    private String receiver;
 
     private String receiverAccount;
 
     private int statement;
 
     private int money;
-
-    private String transactionDate;
-
-    @NotNull
-    private String password;
 }

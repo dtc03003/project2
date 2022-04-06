@@ -25,7 +25,7 @@ public class FaceAIController {
 
     private final FaceAIService faceAIService;
 
-    @Operation(summary="Naver Clovar CFR API 활용한 얼굴 인식", description = "return 받은 나이 평균값으로 리턴 -> 추후 변경될수도")
+    @Operation(summary="Naver Clovar CFR API 활용한 얼굴 인식", description = "return 받은 나이 평균값으로 리턴")
     @PostMapping("/recognize/face")
     public ResponseEntity<Integer> recognizeFace(@RequestBody ImageDto image) throws IOException {
         return ResponseEntity.ok(faceAIService.recognizeFace(image));
