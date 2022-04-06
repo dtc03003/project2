@@ -10,6 +10,7 @@ import RecordRTC from "recordrtc";
 import { useEffect, useState, useRef } from "react";
 import RecordClick from "./Alert/RecordClick"
 import RecordStop from "./Alert/RecordStop"
+import MicIcon from '@mui/icons-material/Mic';
 
 const reco =require('../../../sound/10초후확인버튼.mp3')
 const SoundReco = new Audio(reco)
@@ -68,7 +69,7 @@ const MicToWebPage = () => {
           })
           }
         }
-      >녹음</button>
+      ><MicIcon fontSize="large"/>녹음</button>
     </div>
   )
 }
