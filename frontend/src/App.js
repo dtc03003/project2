@@ -20,6 +20,7 @@ import DepositAdultPage from "./components/views/DepositAgesPage/DepositAdultPag
 import DepositElderPage from "./components/views/DepositAgesPage/DepositElderPage";
 
 import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
+import EventAgePage from "./components/views/FaceAIPage/EventAgePage";
 import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
 
 
@@ -45,11 +46,10 @@ function App() {
           <Route exact path="/depositadult" element={<DepositAdultPage />} />
           <Route exact path="/depositelder" element={<DepositElderPage />} />
           
-
-
           <Route exact path="/faceai" element={<FaceAIPage />} />
-
+          <Route exact path="/event" element={<EventAgePage />} />
           <Route exact path="/faceloading" element={<FaceLoadingPage />} />
+
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
