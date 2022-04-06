@@ -6,7 +6,7 @@ export default function RecordClick() {
     
     Swal.fire({
       icon: 'warning',
-      title: '주의사항',
+      title: '녹음중입니다...',
       html: '꼭 <b></b>초 뒤 확인 버튼을 눌러주세요!!',
       showConfirmButton: false,
       timer: 10000,

@@ -51,7 +51,7 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       enableZoom={false}
-      // enableRotate={false}
+      enableRotate={false}
       maxAzimuthAngle={Math.PI / 100}
       maxPolarAngle={Math.PI / 2}
       minAzimuthAngle={-Math.PI / 100}
@@ -59,14 +59,6 @@ const CameraControls = () => {
     />
   );
 };
-
-const SpeechBubble = () => {
-  return (
-    <div className="Speech_Bubble">
-      <img src={Speech_Bubble} alt="Speech_Bubble"/>
-    </div>
-  )
-}
 
 function Rig() {
   return useFrame((state) => {
@@ -95,7 +87,6 @@ export default function sori_Result() {
   playSoundLeftSori()
   return(
     <div className='LandingFull'>
-      <SpeechBubble />
       <Canvas style={{ height: '96vh', width: '100vw' }} colorManagement shadowMap camera={{position: [0,0,8], fov:50}}>
         <CameraControls />
         <directionalLight intensity={1} />

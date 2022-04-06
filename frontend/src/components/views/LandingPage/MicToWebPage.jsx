@@ -46,7 +46,7 @@ const MicToWebPage = () => {
             };
             var fd = new FormData();
             fd.append("file", blob, "voiceCommand");
-            xhr.open("POST", "http://127.0.0.1:8000/api/ai/voiceCommand", true)
+            xhr.open("POST", "http://j6d201.p.ssafy.io:5555/api/ai/voiceCommand", true)
               xhr.send(fd);
           }
         });
