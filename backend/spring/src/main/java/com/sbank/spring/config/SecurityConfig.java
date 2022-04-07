@@ -67,6 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/api/user/duplicate/**").permitAll() //중복검사 API
             .antMatchers("/api/user/reissue/token").permitAll() //토큰 재발급 API
             .antMatchers("/api/ai/**").permitAll() //얼굴 인식 API
+            .antMatchers("/api/event/**").permitAll() //이벤트 API
             .antMatchers("/swagger-ui.html", "/swagger-ui/**", "/api-docs", "/api-docs/**").permitAll()
             .anyRequest().authenticated() //나머지 요청들은 모두 인증되어야 함
 

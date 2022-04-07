@@ -26,7 +26,7 @@ public class EventController {
     
     private final EventService eventService;
 
-    @Operation(summary="정보 저장 및 이벤트 순위 조회", description = "얼굴 나이 순으로 list 받아옴")
+    @Operation(summary="정보 저장 및 이벤트 순위 조회")
     @PostMapping("/record")
     public ResponseEntity<List<Event>> eventRecord(@RequestBody EventDto eventDto) {
         return ResponseEntity.ok(eventService.eventRecord(eventDto));

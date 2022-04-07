@@ -22,7 +22,7 @@ public class EventService {
 
     @Transactional
     public List<Event> eventRecord(EventDto eventDto) {
-        eventRepository.save(EventDto.toEntity(eventDto));
+        if(!eventDto.getNickname().equals("") && eventDto.getNickname().length() > 0) eventRepository.save(EventDto.toEntity(eventDto));
         return eventRepository.findAllBy();
     }
     
