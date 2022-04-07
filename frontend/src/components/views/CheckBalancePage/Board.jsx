@@ -55,7 +55,7 @@ export default function Board() {
 
     return (
         <div className='outer'>
-            <div className='text-xl font-bold mt-5 mb-5 text-center'>이체 정보</div>
+            <div className='text-xl font-bold mt-5 mb-5 text-center' ><h3>이체 정보</h3></div>
             <table className='inner'>
                 <thead className='justify-between'>
                     <tr className='bg-gray-800'>
