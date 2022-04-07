@@ -4,19 +4,38 @@
     margin: 0 auto;
 }
 
-.t_body .selectAccount {
+
+.t_body .box .selectAccount {
+    height: 200px;
+    border: 1px solid;
+    margin: 0 -5px;
+    margin-top: 50px;
+    display: block;
+}
+
+.t_body .box .selectAccount .accountArea{
+    /* border: 1px solid; */
+    margin: 15px;
+    display: flex;
+}
+
+.t_body .box .selectAccount .accountArea .dropdown{
+    margin-right: 10px;
+}
+
+.t_body .box .selectAccount .balanceArea {
+    width: 30%;
+}
+
+.t_body .box .selectBank {
+    height: 400px;
     border: 1px solid;
     margin: 0 -5px;
     display: block;
 }
 
-.t_body .selectBank {
-    border: 1px solid;
-    margin: 0 -5px;
-    display: block;
-}
-
-.t_body .transfer {
+.t_body .box .transfer {
+    height: 200px;
     width: 100%;
     border: 1px solid;
     display: block;

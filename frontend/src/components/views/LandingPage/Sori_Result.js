@@ -73,7 +73,7 @@ function BubbleData() {
     return CheckToast() && playSoundCheckBa();
   } else if (Voice === '"이체"') {
     return TransferToast() && playSoundTrans();
-  } else if (Voice === '"상품"') {
+  } else if (Voice === '"금융"') {
     return DepositToast() && playSoundDepo();
   } else if (Voice === '"추천"') {
     return FaceToast() && playSoundFaceRe();

@@ -50,3 +50,32 @@
     top: 28%;
     left: 53%;
   }
+
+  .header .top {
+    position: relative;
+    height: 50px;
+    width: 940px;
+    margin: 0 auto;
+  }
+  
+  .header .top .logo {
+    position: absolute;
+    top: 13px;
+    left: 0;
+  }
+  
+  .header .top .logo a {
+    float: left;
+    line-height: 0;
+  }
+  
+  .header .top #utill {
+    float: right;
+    margin: 16px 0 0 0;
+    font-size: 14px;
+  }
+  
+  .header .top #utill .login a {
+    text-decoration: none;
+    color: #454d5b;
+  }

@@ -37,30 +37,32 @@ export default function T_Body() {
     return (
         <div className='t_body'>
             <h1>이체하기</h1>
-
-            {/* 계좌선택 */}
-            <div className='selectAccount'>
-                <h1>계좌선택</h1>
-                <div >
-                    {/* 조회하기 */}
-                    <Dropdown>
-                        <Dropdown.Toggle id="dropdown-basic">
-                            계좌선택
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            <Dropdown.Item>{ userAccount }</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                    <button onClick={foldMessage1}>선택</button>
+            <div className='box'>
+                {/* 계좌선택 */}
+                <div className='selectAccount'>
+                    <h1>계좌선택</h1>
+                    <div className='accountArea'>
+                        {/* 조회하기 */}
+                        <Dropdown>
+                            <Dropdown.Toggle id="dropdown-basic">
+                                계좌선택
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                <Dropdown.Item>{ userAccount }</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        <button onClick={foldMessage1}>선택</button>
+                    </div>
+                    <div className='balanceArea'>
+                        <h1>{userBalance} 원</h1>           
+                    </div>
                 </div>
-                {userBalance}             
+                
+                {/* 은행입력 */}
+                <div className='selectBank'>
+                    <SelectBankBox folding={folding1} account={userAccount} balance={userBalance} GetAccount={GetAccount}></SelectBankBox>
+                </div>
             </div>
-            
-            {/* 은행입력 */}
-            <div className='selectBank'>
-                <SelectBankBox folding={folding1} account={userAccount} balance={userBalance} GetAccount={GetAccount}></SelectBankBox>
-            </div>
-
         </div>
     )
 }
@@ -102,6 +104,7 @@ function SelectBankBox({ folding, account, balance , GetAccount}) {
         <div>
             {/* 계좌입력+이체금액 */}
             <div className='transfer'>
+                <h1>은행선택</h1>
                 <SelectBox options={BANKNAME}></SelectBox>
                 <button onClick={foldMessage2}>선택</button>
             </div>
@@ -174,6 +177,7 @@ function TransferBox({ folding, account, GetAccount }) {
 
     return (
         <div>
+            <h1>정보입력</h1>
             <div>
                 계좌번호 입력 :
                 <input name="receiverAccount"
