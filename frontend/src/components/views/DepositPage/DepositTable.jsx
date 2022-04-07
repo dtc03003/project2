@@ -111,7 +111,7 @@ export default function VerticalTabs() {
           #Youth 우리 아이의 미래를 위한 준비
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -120,7 +120,7 @@ export default function VerticalTabs() {
           </Button>
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -129,7 +129,7 @@ export default function VerticalTabs() {
           </Button>
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -151,7 +151,7 @@ export default function VerticalTabs() {
           #직장인 재테크과 내집 마련의 꿈을 위해
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -160,7 +160,7 @@ export default function VerticalTabs() {
           </Button>
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -170,7 +170,7 @@ export default function VerticalTabs() {
           </Button>
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -192,7 +192,7 @@ export default function VerticalTabs() {
           #골든라이프 노후를 편안하고 든든하게
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -201,7 +201,7 @@ export default function VerticalTabs() {
           </Button>
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",
@@ -210,7 +210,7 @@ export default function VerticalTabs() {
           </Button>
           <Button
             style={{
-              fontSize: "3.7vh",
+              fontSize: "3.3vh",
               minHeight: "10vh",
               maxWidth: "100vh",
               color: "darkblue",

@@ -28,7 +28,7 @@ export default function Header() {
           <li><Link to="/checkbalance">조회</Link></li>
           <li><Link to="/transfer">이체</Link></li>
           <li><Link to="/deposit">금융상품</Link></li>
-          <li><a href=''>뱅킹관리</a></li>
+          <li><Link to="/event">이벤트</Link></li>
         </ul>
       </div>
     </div>

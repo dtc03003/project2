@@ -2,6 +2,7 @@ import React from "react";
 import "./DeCard.scss";
 import { Box, Button, Grid, } from "@mui/material";
 import { fontWeight } from "@mui/system";
+import DepoAlert from "./DepoAlert";
 
 const DeGoldLifeCard2 = () => {
   return (
@@ -30,7 +31,8 @@ const DeGoldLifeCard2 = () => {
        </div>
     </div>
 </div>
-       <Button><h5 style={{fontWeight:'bold'}}>가입하기</h5></Button>
+       <Button onClick={() => {
+         DepoAlert()}}><h5 style={{fontWeight:'bold'}}>가입하기</h5></Button>
     </div>
   );
 };

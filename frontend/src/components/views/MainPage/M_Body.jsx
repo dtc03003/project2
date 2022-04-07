@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "./MainPage.css";
 import { Box, Button } from "@mui/material";
 import MiniSori from "./MiniSori";
+import DepoAlert from "../DepositAgesPage/DepoAlert";
 
 export default function M_Body() {
   return (
@@ -29,17 +30,17 @@ export default function M_Body() {
           </li>
           <li>
             <Link to="/deposit">
-              <span className="icoLoan" style={{ fontWeight: "bold" }}>
+              <span className="icoBank" style={{ fontWeight: "bold" }}>
                 금융상품
               </span>
             </Link>
           </li>
           <li>
-            <a href="">
-              <span className="icoBank" style={{ fontWeight: "bold" }}>
-                뱅킹관리
+            <Link to="/event">
+              <span className="icoLoan" style={{ fontWeight: "bold" }}>
+                이벤트
               </span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -56,21 +57,24 @@ export default function M_Body() {
             <ul id="noticeListUI">
               <li>
                 <p>
-                  <a href="" className="noticeDet">
+                  <a className="noticeDet" onClick={() => {
+         DepoAlert()}}>
                     전자금융사기예방 서비스
                   </a>
                 </p>
               </li>
               <li>
                 <p>
-                  <a href="" className="noticeDet">
+                  <a className="noticeDet" onClick={() => {
+         DepoAlert()}}>
                     통장(카드) 매매•양도는 불법
                   </a>
                 </p>
               </li>
               <li>
                 <p>
-                  <a href="" className="noticeDet">
+                  <a className="noticeDet" onClick={() => {
+         DepoAlert()}}>
                     사진촬영•QR스캔 절대금지
                   </a>
                 </p>
@@ -88,21 +92,21 @@ export default function M_Body() {
             <ul id="eventListUI">
               <li>
                 <p>
-                  <a href="" className="eventDet">
+                  <a href="https://www.fss.or.kr/fss/main/main.do" className="eventDet">
                     금융감독원 바로가기
                   </a>
                 </p>
               </li>
               <li>
                 <p>
-                  <a href="" className="eventDet">
+                  <a href="https://www.ksd.or.kr/ko/" className="eventDet">
                     미수령주식 찾아주기 캠페인
                   </a>
                 </p>
               </li>
               <li>
                 <p>
-                  <a href="" className="eventDet">
+                  <a href="https://fine.fss.or.kr/main/index.jsp" className="eventDet">
                     비교조회서비스
                   </a>
                 </p>
