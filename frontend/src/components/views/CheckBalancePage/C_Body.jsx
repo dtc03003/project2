@@ -42,7 +42,6 @@ export default function T_Body() {
         axios.get('/api/account/find/account/consumption/history/2022')
             .then((Response) => { 
                 setHistory(JSON.stringify(Response.data))
-                console.log(userHistory)
             })
     }
 
@@ -97,8 +96,6 @@ class M_Chart extends Component {
         }
     }
     render() {
-        console.log(this.state.series)
-        
         return (
         <ApexCharts
             options={this.state.options}

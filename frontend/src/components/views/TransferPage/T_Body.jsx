@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Dropdown } from 'react-bootstrap';
-import Result from './Result';
+import Swal from 'sweetalert2'
 
 export default function T_Body() {
     const [userAccount, setAccount] = useState('12345-6789');
@@ -117,7 +117,7 @@ function SelectBankBox({ folding, account, balance , GetAccount}) {
 
 // 계좌, 금액 입력 후 전송
 function TransferBox({ folding, account, GetAccount }) {
-    const [receiver, setReceiver] = useState();
+    const [receiver, setReceiver] = useState("박싸피");
 
     const [transferData, setTransferData] = useState({
         senderAccount: account,
@@ -136,13 +136,21 @@ function TransferBox({ folding, account, GetAccount }) {
             [name]: value,
         });
     };
+
+    const onReset = () => {
+        setReceiver({
+            receiverAccount: "",
+            money: 0,
+        });
+    };
+
      // 받는 사람 이름 받아오기
     function getName() {
             const token = localStorage.getItem("accessToken")
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
             axios.get(`/api/account/find/byAccount/${receiverAccount}`)
                 .then((Response) => {
-                    setReceiver(Response.data)
+                    setReceiver(prev => prev = Response.data)
                     console.log(Response.data)
                     })
                 .catch((Error) => { console.log(Error) }) 
@@ -150,26 +158,53 @@ function TransferBox({ folding, account, GetAccount }) {
             return receiver
     }
 
+    
     // 계좌이체 구현부분
     function onClick() {
         getName();
-        console.log(receiver)
-
         // 금액 및 수신자 확인
-        if (window.confirm(receiver + "님께 " + money + "원을 송금하시겠습니까?")) {
-            const token = localStorage.getItem("accessToken")
+        if (receiver != undefined) {
             
-            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
-            axios.post(`api/account/transfer`, transferData)
-                .then((Response) => {
-                GetAccount();   // 잔액 최신화
-                setReceiver(Response.data)  
-                alert("송금이 완료되었습니다.");
+            Swal.fire({
+                title: `${receiver} 님에게`,
+                text: `${money}원을 입금 하시겠습니까?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '송금하기',
+                cancelButtonText: '취소하기',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                    const token = localStorage.getItem("accessToken")
+            
+                    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+                    axios.post(`api/account/transfer`, transferData)
+                        .then((Response) => {
+                            GetAccount();   // 잔액 최신화
+                            setReceiver(Response.data)
+                            onReset();
+                            Swal.fire(
+                                '송금완료',
+                                `${receiver} 님에게 ${money}원을 송금완료 했습니다.`,
+                                'success'
+                            ).then((result) => {
+                                if (result.isConfirmed) {
+                                    console.log("여기가 작동이 된다면 좋겠다.아아아아")
+                                }
+                            })
+                        })
+                        .catch((Error) => {
+                            console.log(Error)
+                            onReset();
+                            Swal.fire(
+                                '송금실패',
+                                `송금실패 했습니다.`,
+                                'error'
+                            )
+                        }) 
+                }
             })
-            .catch((Error) => { console.log(Error) }) 
-
-        } else {
-            alert("송금이 취소되었습니다.");
         }
     }
 
@@ -183,18 +218,17 @@ function TransferBox({ folding, account, GetAccount }) {
                 <input name="receiverAccount"
                     placeholder="계좌번호" 
                     onChange={onChange} 
-                    value={receiverAccount}>
-                </input>
+                    value={receiverAccount}/>
             </div>
             <div>
                 송금금액 입력 :
                 <input name="money"
                     placeholder="금액입력" 
                     onChange={onChange} 
-                    value={money}>
-                </input>
+                    value={money}/>
             </div>
             <button onClick={onClick}>송금</button>
+            <button onClick={onReset}>리셋</button>
         </div>
     );
 }
