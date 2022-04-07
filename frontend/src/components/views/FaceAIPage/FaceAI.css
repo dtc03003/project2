@@ -66,7 +66,7 @@
     font-size: 2vw;
 }
 
-.cameraImg {
+.cameraImg, .ecameraImg {
     width: 8vw;
     height: 13vh;
     cursor: pointer;
@@ -75,6 +75,22 @@
 .cameraImg:hover {
     width: 9vw;
     height: 15vh;
+}
+
+.ecameraImg:hover {
+    width: 8vw;
+    height: 14vh;
+}
+
+.backImg {
+    width: 6vw;
+    height: 12vh;
+    cursor: pointer;
+}
+
+.backImg:hover {
+    width: 6vw;
+    height: 13vh;
 }
 
 #eventShow {

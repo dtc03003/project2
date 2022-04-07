@@ -22,7 +22,7 @@ export default function M_Body() {
             </Link>
           </li>
           <li>
-            <a href="">
+            <a href="/transfer">
               <span className="icoTransfer" style={{ fontWeight: "bold" }}>
                 이체하기
               </span>

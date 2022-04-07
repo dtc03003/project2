@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import Webcam from "react-webcam";
 import Camera from "../../../assets/camera.png"
+import Back from "../../../assets/back.png"
 import "./FaceAI.css";
 
 import axios from "axios";
@@ -9,7 +10,7 @@ import Swal from 'sweetalert2'
 
 const BASE_URL = "https://j6d201.p.ssafy.io:9000/api";
 
-export default function EventAgePage() {
+export default function Eventage() {
     const WebcamCapture = () => {
     const webcamRef = React.useRef(null);
     const [info, setInfo] = useState([]);
@@ -60,6 +61,8 @@ export default function EventAgePage() {
 
     }, [webcamRef]);
 
+    const goback = () => window.location.href = '/main';
+
     return (
         <div id="faceAIPage">
             <div id="title">
@@ -81,7 +84,8 @@ export default function EventAgePage() {
             </div>
             
             <div id="webcamBtn">
-                <img src={Camera} onClick={capture} alt="Camera" className="cameraImg"/>
+                <img src={Camera} onClick={capture} alt="Camera" className="ecameraImg"/>
+                <img src={Back} onClick={goback} alt="Back" className="backImg"/>
             </div>
 
             <div className='eventTable' id="eventShow">

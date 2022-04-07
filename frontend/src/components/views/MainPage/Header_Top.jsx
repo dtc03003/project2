@@ -19,7 +19,10 @@ function LoginState() {
         .then((Response) => {
             setUserName(JSON.stringify(Response.data.name).slice(1, -1));
         })
-        .catch((Error) => { console.log(Error) }) 
+        .catch((Error) => { 
+            console.log(Error)
+            localStorage.clear();
+        }) 
     
     const navigate = useNavigate();
     const isLogout = () => {
