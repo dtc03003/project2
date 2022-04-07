@@ -11,15 +11,27 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SuncheonB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 #faceAIPage, #faceLoadingPage {
     width: 100%;
-    height: 91vh;
+    /* height: 91vh; */
     vertical-align: middle;
     font-size: 10pt;
 }
 
-#title, h6.eventFont {
+#title {
     margin-top: 9vh;
 }
 
@@ -33,21 +45,22 @@
     height: 60vh;
 }
 
+#eventWebcam {
+    margin-top: 10px;
+    height: 60vh;
+}
+
 #title .faceAIInfo, .loading p, .eventFont, #writeNick {
     font-family: 'yg-jalnan', serif;
 }
 
-#title, #webcam, #webcamBtn, #faceLoadingPage, .eventTable {
+#title, #webcam, #eventWebcam, #webcamBtn, #faceLoadingPage, .eventTable, .table * {
     text-align : center;
 }
 
 #faceLoadingPage .loading {
     margin-top: 5%;
 }
-
-/* .loading .loadingImg {
-    width: 40vw;
-} */
 
 .loading p {
     font-size: 2vw;
@@ -64,19 +77,41 @@
     height: 15vh;
 }
 
-.thread {
-    display: inline-block;
-    margin: 0 10%;
-}
-
 #eventShow {
     display: none;
 }
 
+table.eventTable * {
+    text-align: center;
+}
+
 #writeNick {
-    margin: 1% auto;
     font-size: 10pt;
     padding: 5px 0;
     text-align: center;
     width: 20%;
+}
+
+#evtable {
+    margin: 0 auto;
+    font-size: 10pt;
+}
+
+#evtable tr td {
+    font-size: 15pt;
+}
+
+#evtable tr td {
+    padding: 0 10vw;
+    font-weight: bold;
+    font-family: 'GangwonEdu_OTFBoldA', serif;
+}
+
+#evtable thead tr td {
+    font-size: 12pt;
+    font-family: 'SuncheonB', serif;
+}
+
+#evtable tbody tr td:last-child {
+    color: darkblue;
 }
