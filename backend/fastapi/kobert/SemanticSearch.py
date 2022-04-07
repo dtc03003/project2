@@ -1,7 +1,7 @@
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 
-model_path = '/workspace/fastapi/KoSentenceBERT_SKTBERT/output/training_sts'
+model_path = '/workspace/S06P22D201/backend/fastapi/KoSentenceBERT_SKTBERT/output/training_sts'
 
 embedder = SentenceTransformer(model_path)
 
