@@ -24,7 +24,7 @@ spring:
     #DataBase Settings
     dataSource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://j6d201.p.ssafy.io:3306/sbank?useSSL=false&allowPublicKeyRetrieval=true
+        url: jdbc:mysql://j6d201.p.ssafy.io:3306/sbank
         username: root
         password: sbankd201**
     
