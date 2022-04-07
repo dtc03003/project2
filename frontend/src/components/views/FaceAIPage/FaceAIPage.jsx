@@ -23,6 +23,7 @@ export default function FaceAI() {
 
             <div id="webcam">
                 <Webcam
+                style={{height:'60vh'}}
                 audio={false}
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
