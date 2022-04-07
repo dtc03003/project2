@@ -23,6 +23,9 @@ import FaceAIPage from "./components/views/FaceAIPage/FaceAIPage";
 import EventAgePage from "./components/views/FaceAIPage/EventAgePage";
 import FaceLoadingPage from "./components/views/FaceAIPage/FaceLoadingPage";
 
+import PrivateRoute from './utils/PrivateRoute';
+
+
 
 function App() {
   return (
@@ -37,9 +40,12 @@ function App() {
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/signup" element={<SignupPage />} />
 
-          <Route exact path="/checkbalance" element={<CheckBalancePage />} />
+          <Route exact path="/" element={<PrivateRoute />}>
+            <Route exact path="/checkbalance" element={<CheckBalancePage />} />
+            <Route exact path="/transfer" element={<Transferpage />} />
+          </Route>
+
           <Route exact path="/faceai" element={<FaceAIPage />} />
-          <Route exact path="/transfer" element={<Transferpage />} />
 
           <Route exact path="/deposit" element={<DepositPage />} />
           <Route exact path="/depositkid" element={<DepositKidPage />} />
