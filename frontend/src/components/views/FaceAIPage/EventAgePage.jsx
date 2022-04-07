@@ -38,6 +38,7 @@ export default function EventAgePage() {
                 .then((result) => {
                     if (result.isConfirmed) {
                         document.getElementById("eventShow").style.display = "block";
+                        showList();
                     } else if (result.isDenied) {
                         window.location.href='/'
                     }
@@ -45,15 +46,17 @@ export default function EventAgePage() {
             }
         )
 
-        const nickname = document.getElementById("writeNick").value.trim();
-        const participant = {
-                "nickname": nickname ? nickname : '',
-                "age": `${sessionStorage.getItem("eventFaceAge")}`
+        function showList() {
+            const nickname = document.getElementById("writeNick").value.trim();
+            const participant = {
+                    "nickname": nickname ? nickname : '',
+                    "age": `${sessionStorage.getItem("eventFaceAge")}`
+            }
+            axios.post(`${BASE_URL}/event/record`, participant, {headers: headers})
+                .then((result) => {
+                    setInfo(result.data);
+                })
         }
-        axios.post(`${BASE_URL}/event/record`, participant, {headers: headers})
-            .then((result) => {
-                setInfo(result.data);
-            })
 
     }, [webcamRef]);
 
