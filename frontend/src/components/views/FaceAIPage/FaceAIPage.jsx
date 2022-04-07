@@ -18,7 +18,7 @@ export default function FaceAI() {
         <div id="faceAIPage">
             <div id="title">
                 <h1 id="titleName">예적금 추천 서비스</h1>
-                <h3 id="faceAIInfo">카메라를 보고 사진기를 눌러주세요!</h3>
+                <h3 className="faceAIInfo">카메라를 보고 사진기를 눌러주세요!</h3>
             </div>
 
             <div id="webcam">

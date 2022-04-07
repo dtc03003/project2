@@ -21,9 +21,9 @@ public class EventService {
     private final EventRepository eventRepository;
 
     @Transactional
-    public List<Event> eventRank(EventDto eventDto) {
+    public List<Event> eventRecord(EventDto eventDto) {
         eventRepository.save(EventDto.toEntity(eventDto));
-        return eventRepository.findAllByOrderByAgeAsc();
+        return eventRepository.findAllBy();
     }
     
 }
