@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import LandingPage from "./components/views/LandingPage/LandingPage";
 import Test from "./components/views/LandingPage/Test";
@@ -44,8 +44,6 @@ function App() {
             <Route exact path="/checkbalance" element={<CheckBalancePage />} />
             <Route exact path="/transfer" element={<Transferpage />} />
           </Route>
-
-          <Route exact path="/faceai" element={<FaceAIPage />} />
 
           <Route exact path="/deposit" element={<DepositPage />} />
           <Route exact path="/depositkid" element={<DepositKidPage />} />
