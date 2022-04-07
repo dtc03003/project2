@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 export default function T_Body() {
     const [userAccount, setAccount] = useState('12345-6789');
     const [userBalance, setBalance] = useState('');
+    const [Sstate, setSstate] = useState(false);
 
     useEffect(() => {
         GetAccount()
@@ -34,6 +35,25 @@ export default function T_Body() {
         setFolding1((show) => !show);
     };
 
+    // selectbox
+    const ACCOUNTDATA = [
+        { value: `${userAccount}`, name:`${userAccount}`}
+    ]
+
+    function SelectBox(props) {
+        return (
+            <select onChange={changeSelectBox}>
+                {props.options.map((option) => (
+                    <option key={option.value} value={option.value}>{option.name}</option>
+                ))}
+            </select>
+        )
+    }
+
+    function changeSelectBox(e) {
+        setAccount(e.target.value);
+    };
+
     return (
         <div className='t_body'>
             <h1>이체하기</h1>
@@ -43,14 +63,15 @@ export default function T_Body() {
                     <h1>계좌선택</h1>
                     <div className='accountArea'>
                         {/* 조회하기 */}
-                        <Dropdown>
+                        {/* <Dropdown>
                             <Dropdown.Toggle id="dropdown-basic">
                                 계좌선택
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <Dropdown.Item>{ userAccount }</Dropdown.Item>
                             </Dropdown.Menu>
-                        </Dropdown>
+                        </Dropdown> */}
+                        <SelectBox options={ACCOUNTDATA}/>
                         <button onClick={foldMessage1}>선택</button>
                     </div>
                     <div className='balanceArea'>
@@ -84,7 +105,6 @@ function SelectBankBox({ folding, account, balance , GetAccount}) {
     ];
 
     function changeSelectBox(e) {
-        console.log(e.target.value)
         setBank(e.target.value);
     };
 
@@ -137,13 +157,6 @@ function TransferBox({ folding, account, GetAccount }) {
         });
     };
 
-    const onReset = () => {
-        setReceiver({
-            receiverAccount: "",
-            money: 0,
-        });
-    };
-
      // 받는 사람 이름 받아오기
     function getName() {
             const token = localStorage.getItem("accessToken")
@@ -183,7 +196,6 @@ function TransferBox({ folding, account, GetAccount }) {
                         .then((Response) => {
                             GetAccount();   // 잔액 최신화
                             setReceiver(Response.data)
-                            onReset();
                             Swal.fire(
                                 '송금완료',
                                 `${receiver} 님에게 ${money}원을 송금완료 했습니다.`,
@@ -196,7 +208,6 @@ function TransferBox({ folding, account, GetAccount }) {
                         })
                         .catch((Error) => {
                             console.log(Error)
-                            onReset();
                             Swal.fire(
                                 '송금실패',
                                 `송금실패 했습니다.`,
@@ -228,7 +239,6 @@ function TransferBox({ folding, account, GetAccount }) {
                     value={money}/>
             </div>
             <button onClick={onClick}>송금</button>
-            <button onClick={onReset}>리셋</button>
         </div>
     );
 }
