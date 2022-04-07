@@ -4,6 +4,7 @@ import { run as runHolder } from "holderjs/holder";
 import { Link } from "react-router-dom";
 import styles from "./MainPage.css";
 import { Box, Button } from "@mui/material";
+import MiniSori from "./MiniSori";
 
 export default function M_Body() {
   return (
@@ -133,6 +134,7 @@ export default function M_Body() {
           </div> */}
         </div>
       </div>
+      <MiniSori></MiniSori>
     </div>
   );
 }
@@ -180,7 +182,7 @@ function Carousel1() {
         >
           <img
             className="d-block w-100"
-            src="img/mainimg3.png"
+            src="img/mainimg1920.png"
             alt="Second slide"
           />
           <img
