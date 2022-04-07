@@ -6,6 +6,7 @@ import "../LoginPage/Accounts.css";
 import axios from "axios";
 import { Box, Button , Modal,Typography,Backdrop} from "@mui/material";
 import { Check } from "@mui/icons-material";
+import DepoAlert from "../DepositAgesPage/DepoAlert";
 
 function SignupPage(props) {
   let navigate = useNavigate();
@@ -403,7 +404,7 @@ function SignupPage(props) {
                   {activeDpIdBtn === false ? null : (
                     <div>
                       {/* 아이디 중복 검사 결과 false면 체크 버튼 / true면 체크표시로 바꾸기 */}
-                      {DuIdCheck === null ? (
+                      { DuIdCheck === null ? (
                         <Button
                           id="check-btn"
                           onClick={idCheck}
@@ -414,7 +415,7 @@ function SignupPage(props) {
                         </Button>
                       ) : (
                         <Check id="checkiconbg" className="childid check-icon" />
-                      )}
+                      )} 
                     </div>
                   )}
                 </div>
