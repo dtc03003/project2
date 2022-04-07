@@ -4,6 +4,7 @@ import axios from 'axios';
 import Board from './Board';
 // import styles from './CheckBalance'
 import styles from './CheckBalance.css'
+import { Box } from "@mui/material";
 
 export default function T_Body() {
     const [userAccount, setAccount] = useState('');
@@ -47,7 +48,35 @@ export default function T_Body() {
 
     return (
         <div className='c_body'>
-                <h1>잔액 조회</h1>
+            <div><Box
+        style={{
+          height: "50px",
+          // backgroundColor: "aliceblue",
+          padding: "3vh",
+          fontSize: "2vh",
+          
+          fontWeight: "bolder",
+        }}
+      >
+        이체
+      </Box>
+      <hr style={{ width: "15vh" }}></hr>
+      <Box
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          // backgroundColor: "aliceblue",
+          fontWeight: "bolder",
+          fontSize: "2.5vh",
+          paddingBottom:'4.5vh'
+        }}
+      >
+        Sbank 고객님을 위한 계좌 조회 서비스 제공
+        <br></br>
+        <h5>쉽고 간단한 조회 서비스 월별 사용 금액도 함께!</h5>
+        <br></br>
+      </Box></div>
+                <h1 style={{paddingBottom:'1vh'}}>잔액 조회</h1>
             <div className='Check_Balance'>
                 <div className='accountArea'><GetAccount/></div>
                 <M_Chart/>
