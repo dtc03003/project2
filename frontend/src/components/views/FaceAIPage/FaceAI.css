@@ -12,16 +12,12 @@
     font-style: normal;
 }
 
-/* * {
-    background-color: #F0FFFF;
-} */
-
 #faceAIPage, #faceLoadingPage {
     vertical-align: middle;
-    font-size: 10px;
+    font-size: 10pt;
 }
 
-#title {
+#title, h6.eventFont {
     margin-top: 1%;
 }
 
@@ -30,19 +26,11 @@
     color:darkblue;
 }
 
-#title h3#faceAIInfo, .loading p {
+#title .faceAIInfo, .loading p, .eventFont, #writeNick {
     font-family: 'yg-jalnan', serif;
 }
 
-/* p#titleName{
-    font-size: 2.2vw;
-}
-
-p#faceAIInfo{
-    font-size: 1.7vw;
-} */
-
-#title, #webcam, #webcamBtn, #faceLoadingPage {
+#title, #webcam, #webcamBtn, #faceLoadingPage, .eventTable {
     text-align : center;
 }
 
@@ -50,9 +38,9 @@ p#faceAIInfo{
     margin-top: 5%;
 }
 
-.loading .loadingImg {
+/* .loading .loadingImg {
     width: 40vw;
-}
+} */
 
 .loading p {
     font-size: 2vw;
@@ -67,4 +55,21 @@ p#faceAIInfo{
 .cameraImg:hover {
     width: 9vw;
     height: 15vh;
+}
+
+.thread {
+    display: inline-block;
+    margin: 0 10%;
+}
+
+#eventShow {
+    display: none;
+}
+
+#writeNick {
+    margin: 1% auto;
+    font-size: 10pt;
+    padding: 5px 0;
+    text-align: center;
+    width: 20%;
 }
