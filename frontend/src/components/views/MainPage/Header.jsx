@@ -12,7 +12,7 @@ export default function Header() {
         <h1 className="logo">
           <Link to="/main">
             {/* 로고 변경예정 */}
-            <img src="https://www.kbanknow.com/resource/img/reform/layout/logo_kbank.png"></img>
+            <img style={{width:'9.5vh', height:'4.5vh'}} src="img/SBankbackremove.png"></img>
           </Link>
         </h1>
 
@@ -25,9 +25,9 @@ export default function Header() {
       <div className='gnb'>
         <ul className='topGnb'>
           {/* 추후 링크 추가 */}
-          <li> <Link to="/transfer">조회</Link></li>
-          <li><a href=''>이체</a></li>
-          <li><a href=''>대출</a></li>
+          <li><Link to="/checkbalance">조회</Link></li>
+          <li><Link to="/transfer">이체</Link></li>
+          <li><Link to="/deposit">금융상품</Link></li>
           <li><a href=''>뱅킹관리</a></li>
         </ul>
       </div>
@@ -51,16 +51,13 @@ function LoginState() {
     console.log("버튼 클릭됨")
     localStorage.clear();
     navigate('/');
+
   };
   
   return (
-    <div>
-      <span className='login'>
-        <button onClick={isLogout}>로그아웃</button>
-        <p> {userName} 님 환영합니다.</p>
-      </span>
-      <span>
-      </span>
+    <div style={{display:'flex',flexDirection:'row-reverse'}}>
+        <button onClick={isLogout} style={{border:'none',borderRadius:'20px',color:'white',background:'rgb(0, 119, 255)'}}>로그아웃</button>
+        <p style={{margin:'5px'}}>{userName} 님 환영합니다.</p>
     </div>
   )
 }
@@ -72,7 +69,7 @@ function UnLoginState() {
         <Link to="/login">로그인</Link>
       </span>
       <span>
-        <Link to="/signup">회원가입</Link>
+        <Link to="/signup" style={{textDecoration:'none',color:'black',paddingLeft:'1vh'}}>회원가입</Link>
       </span>
     </div>
   );

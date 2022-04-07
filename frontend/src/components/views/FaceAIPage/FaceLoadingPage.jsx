@@ -3,6 +3,12 @@ import FaceLoading from "../../../assets/faceLoading.gif"
 import "./FaceAI.css";
 
 const FaceLoadingPage = () => {
+  const load = require("../../../sound/분석중.mp3");
+  const SoundLoading = new Audio(load);
+  const playSoundLoading = () => {
+    SoundLoading.play();
+  };
+  playSoundLoading();
   setTimeout(() => {
     moveInfo();
   }, 5000)
@@ -19,16 +25,15 @@ const FaceLoadingPage = () => {
 
 function moveInfo() {
   const age = sessionStorage.getItem("faceAge");
-  //링크는 후에 각 페이지 완성되면 변경 예정
   if(age != null) {
       if(age < 20) {
-          window.location.href ='/main';
-      }else if(age < 40) {
-          window.location.href = '/login';
+          window.location.href ='/depositkid';
+      }else if(age < 50) {
+          window.location.href = '/depositadult';
       }else {
-          window.location.href = '/signup';
+          window.location.href = '/depositelder';
       }
   }
 }
 
-export default FaceLoadingPage
+export default FaceLoadingPage;

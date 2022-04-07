@@ -5,7 +5,7 @@ import Sori_Normal from "./Sori_Normal"
 
 const Landingpage = () => {
   return (
-    <div className='LandingFull'>
+    <div className='L-body'>
       <div className="header" >
         <div className='top'>
           <h1 className="logo">
@@ -13,9 +13,8 @@ const Landingpage = () => {
               {/* 로고 변경예정 */}
               <img src="https://www.kbanknow.com/resource/img/reform/layout/logo_kbank.png"></img>
             </Link>
-            
           </h1>
-
+          
           <div id="utill">
             <span className='login'>
               <Link to="/login">로그인</Link>
