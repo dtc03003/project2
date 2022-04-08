@@ -58,7 +58,7 @@ export default function T_Body() {
           fontWeight: "bolder",
         }}
       >
-        이체
+        조회
       </Box>
       <hr style={{ width: "15vh" }}></hr>
       <Box
