@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -49,4 +51,8 @@ public class History {
 
     @Column(nullable = false)
     private String transactionDate;
+
+    @ManyToOne
+    @JoinColumn(name = "accountId")
+    private Account account; //FK 설정
 }
