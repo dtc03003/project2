@@ -52,7 +52,7 @@ public class History {
     @Column(nullable = false)
     private String transactionDate;
 
-    @ManyToOne
-    @JoinColumn(name = "accountId")
-    private Account account; //FK 설정
+    // @ManyToOne
+    // @JoinColumn(name = "accountId")
+    // private Account account; //FK 설정
 }
