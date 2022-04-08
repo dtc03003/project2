@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { useForm } from 'react-hook-form';
 import axios from "axios";
 import { Dropdown } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Box } from "@mui/material";
 import { Button } from "bootstrap";
@@ -184,6 +185,7 @@ function SelectBankBox({ folding, account, balance, GetAccount }) {
 
 // 계좌, 금액 입력 후 전송
 function TransferBox({ folding, account, GetAccount }) {
+  let navigate = useNavigate();
   const [receiver, setReceiver] = useState("박싸피");
 
   const [transferData, setTransferData] = useState({
@@ -222,7 +224,9 @@ function TransferBox({ folding, account, GetAccount }) {
   }
 
   // 계좌이체 구현부분
-  function onClick() {
+    function onClick() {
+
+
     getName();
     // 금액 및 수신자 확인
     if (receiver != undefined) {
@@ -250,8 +254,8 @@ function TransferBox({ folding, account, GetAccount }) {
                 `${receiver} 님에게 ${money}원을 송금완료 했습니다.`,
                 "success"
               ).then((result) => {
-                if (result.isConfirmed) {
-                  console.log("여기가 작동이 된다면 좋겠다.아아아아");
+                  if (result.isConfirmed) {
+                    navigate("/checkbalance");
                 }
               });
             })
