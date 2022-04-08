@@ -55,7 +55,7 @@ public class AccountService {
     public AccountDto findMyAccount() {
         Member member = memberRepository.findById(SecurityUtil.getCurrentMemberId());
         Long memberNo = member.getNo();
-        return AccountDto.from(accountRepository.getById(memberNo));
+        return AccountDto.from(accountRepository.findAccountByMemberNo(memberNo));
     }
 
     @Transactional //계좌 번호로 사용자 조회
