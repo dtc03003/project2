@@ -131,7 +131,7 @@ function LoginPage() {
                 </div>
                 <br></br>
                 <br></br>
-                <div style={{ marginTop: "30px" }} class="hr"></div>
+                <div style={{ marginTop: "30px" }} className="hr"></div>
                 <div className="group">
                   <Button
                     style={{ 

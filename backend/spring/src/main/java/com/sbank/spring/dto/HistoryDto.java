@@ -1,5 +1,7 @@
 package com.sbank.spring.dto;
 
+import java.time.LocalDate;
+
 import com.sbank.spring.entity.Account;
 import com.sbank.spring.entity.History;
 
@@ -30,16 +32,16 @@ public class HistoryDto {
 
     private String transactionDate;
 
-    public static History toEntity(TransferDto transferDto, Long accountId) {
+    public static History toEntity(String sender, String receiver, TransferDto transferDto, Long accountId) {
         return History.builder()
                     .accountId(accountId)
-                    .sender(transferDto.getSender())
+                    .sender(sender)
                     .senderAccount(transferDto.getSenderAccount())
-                    .receiver(transferDto.getReceiver())
+                    .receiver(receiver)
                     .receiverAccount(transferDto.getReceiverAccount())
                     .statement(transferDto.getStatement())
                     .money(transferDto.getMoney())
-                    .transactionDate(transferDto.getTransactionDate())
+                    .transactionDate(LocalDate.now().toString())
                     .build();
     }
 
@@ -61,7 +63,7 @@ public class HistoryDto {
                     .senderAccount(account.getAccountNumber())
                     .receiver(name)
                     .receiverAccount(account.getAccountNumber())
-                    .statement(0)
+                    .statement(1)
                     .money(depositDto.getMoney())
                     .transactionDate(depositDto.getTransactionDate())
                     .build();

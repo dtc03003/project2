@@ -1,0 +1,133 @@
+/*CSS Font*/
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SuncheonB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#faceAIPage, #faceLoadingPage {
+    width: 100%;
+    /* height: 91vh; */
+    vertical-align: middle;
+    font-size: 10pt;
+}
+
+#title {
+    margin-top: 9vh;
+}
+
+#title h1#titleName {
+    font-family: 'SDSamliphopangche_Outline', serif;
+    color:darkblue;
+}
+
+#webcam {
+    margin-top: 55px;
+    height: 60vh;
+}
+
+#eventWebcam {
+    margin-top: 10px;
+    height: 60vh;
+}
+
+#title .faceAIInfo, .loading p, .eventFont, #writeNick {
+    font-family: 'yg-jalnan', serif;
+}
+
+#title, #webcam, #eventWebcam, #webcamBtn, #faceLoadingPage, .eventTable, .table * {
+    text-align : center;
+}
+
+#faceLoadingPage .loading {
+    margin-top: 5%;
+}
+
+.loading p {
+    font-size: 2vw;
+}
+
+.cameraImg, .ecameraImg {
+    width: 8vw;
+    height: 13vh;
+    cursor: pointer;
+}
+
+.cameraImg:hover {
+    width: 9vw;
+    height: 15vh;
+}
+
+.ecameraImg:hover {
+    width: 8vw;
+    height: 14vh;
+}
+
+.backImg {
+    width: 6vw;
+    height: 12vh;
+    cursor: pointer;
+}
+
+.backImg:hover {
+    width: 6vw;
+    height: 13vh;
+}
+
+#eventShow {
+    display: none;
+}
+
+table.eventTable * {
+    text-align: center;
+}
+
+#writeNick {
+    font-size: 10pt;
+    padding: 5px 0;
+    text-align: center;
+    width: 20%;
+}
+
+#evtable {
+    margin: 0 auto;
+    font-size: 10pt;
+}
+
+#evtable tr td {
+    font-size: 15pt;
+}
+
+#evtable tr td {
+    padding: 0 10vw;
+    font-weight: bold;
+    font-family: 'GangwonEdu_OTFBoldA', serif;
+}
+
+#evtable thead tr td {
+    font-size: 12pt;
+    font-family: 'SuncheonB', serif;
+}
+
+#evtable tbody tr td:last-child {
+    color: darkblue;
+}

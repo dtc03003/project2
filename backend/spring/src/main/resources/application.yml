@@ -1,5 +1,16 @@
 server:
     port: 9000
+    ssl:
+        enabled: true
+        key-store: classpath:keystore.p12
+        key-store-password: sbankd201**
+        key-store-type: PKCS12
+        key-alias: sbank-ssl
+        # trust-store: classpath:
+        # true-store-password: 
+        # protocol: TLS
+        # enabled-protocols:
+        # - TLSv1.2
 
 #Swagger Settings
 # http://서버주소/swagger-ui.html
@@ -13,7 +24,7 @@ spring:
     #DataBase Settings
     dataSource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://j6d201.p.ssafy.io:3306/sbank?useSSL=false&allowPublicKeyRetrieval=true
+        url: jdbc:mysql://j6d201.p.ssafy.io:3306/sbank
         username: root
         password: sbankd201**
     
@@ -51,6 +62,12 @@ jwt:
     secret: c3NhZnktZ3VtaS10d28tYmFuLWQyMDEtYmFja2VuZC1qd3Qtc2VjcmV0LXNzYWZ5LWd1bWktdHdvLWJhbi1kMjAxLWJhY2tlbmQtand0LXNlY3JldAo= #jwt secret key
     #echo 'ssafy-gumi-two-ban-d201-backend-jwt-secret-ssafy-gumi-two-ban-d201-backend-jwt-secret'|base64
 
+social:
+    naver:
+        client-id: AoRx4gYXgVnKwhqd8C9C #cliendId key
+        client-secret: gRkgJZ58po #clientSecret key
+        url:
+            face: https://openapi.naver.com/v1/vision/face
 # Hibernate logging
 logging:
     level:

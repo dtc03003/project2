@@ -1,9 +1,11 @@
 from fastapi import FastAPI, File, UploadFile
 from bin import inferenceFunc
+from kobert.SemanticSearch import semanticSearch
 
 app = FastAPI()
 
 
-@app.post("/api/ai/voiceCommand")
+@app.post("/fastapi/ai/voiceCommand")
 async def executeCommand(file : UploadFile = File(...)):
-    return inferenceFunc.stt(file)
+    query = inferenceFunc.stt(file)
+    return semanticSearch(query)

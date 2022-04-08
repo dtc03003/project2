@@ -12,18 +12,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TransferDto {
-    
-    private String sender;
 
     private String senderAccount;
-
-    private String receiver;
 
     private String receiverAccount;
 
     private int statement;
 
     private int money;
-
-    private String transactionDate;
 }

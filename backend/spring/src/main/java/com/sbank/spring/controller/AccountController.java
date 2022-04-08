@@ -5,8 +5,8 @@ import java.util.List;
 import com.sbank.spring.dto.AccountDto;
 import com.sbank.spring.dto.DepositDto;
 import com.sbank.spring.dto.HistoryDto;
+import com.sbank.spring.dto.NewHistoryDto;
 import com.sbank.spring.dto.TransferDto;
-import com.sbank.spring.entity.History;
 import com.sbank.spring.service.AccountService;
 
 import org.springframework.http.HttpStatus;
@@ -53,7 +53,7 @@ public class AccountController {
         return ResponseEntity.ok(accountService.findBalanceByAccountNumber(account));
     }
     
-    @Operation(summary = "계좌 이체", description="0: 입금,송금, 1: 받은 내역")
+    @Operation(summary = "계좌 이체", description="0: 출금, 1: 입금")
     @PostMapping(value="/transfer")
     public ResponseEntity<HistoryDto> transferMoney(@RequestBody TransferDto transferDto) {
         HistoryDto historyDto = accountService.transferMoney(transferDto);
@@ -63,7 +63,7 @@ public class AccountController {
 
     @Operation(summary = "내역 조회")
     @GetMapping(value="/find/account/record/{account}")
-    public ResponseEntity<List<History>> recordHistory(@PathVariable String account) {
+    public ResponseEntity<List<NewHistoryDto>> recordHistory(@PathVariable String account) {
         return ResponseEntity.ok(accountService.recordHistory(account));
     }
 

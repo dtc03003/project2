@@ -1,0 +1,9 @@
+.carouselback{
+  background: url(./carobackground2.png) no-repeat center;
+  opacity: 0.9;
+  background-size:cover;
+  background-position: top;
+  height:65vh;
+  /* background-color:aliceblue; */
+  /* background-color: rgb(143, 203, 255); */
+}
