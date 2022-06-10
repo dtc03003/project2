@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://lab.ssafy.com/s06-ai-speech-sub2/S06P22D201.git
+	fetch = +refs/*:refs/*
+	mirror = true
